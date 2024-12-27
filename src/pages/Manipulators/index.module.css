@@ -1,0 +1,115 @@
+.main {
+    width: 100%;
+    max-width: 2000px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    background-image: url("../../images/manipulators.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+
+.section h2 {
+    padding-left: 100px;
+    padding-top: 120px;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    text-align: left;
+    color: #0446F1;
+}
+
+
+.all_blocks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    margin-top: 180px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.blocks {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.blocks:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+}
+
+
+.blocks h3 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #0446F1;
+
+}
+
+
+.blocks {
+    width: 100%;
+    min-width: 305px;
+    max-width: 325px;
+    height: 375px;
+    border-radius: 30px;
+    background: #FAFAFA;
+    box-shadow: 20px 20px 50px 10px #0446F11A;
+    padding: 20px 0 0 20px;
+}
+
+
+@media (max-width: 724px) {
+    .section h2 {
+        text-align: start;
+        font-size: 28px;
+        font-weight: 400;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .all_blocks {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        margin-top: 80px;
+
+    }
+}
+
+@media (max-width: 724px) {
+    .section {
+        background-size: 60vw auto;
+        background-position: right top;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        background-size: 80vw auto;
+        background-position: right top;
+    }
+}
+
+
+

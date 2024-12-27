@@ -1,0 +1,253 @@
+.header {
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.navLinks .link{
+    display: inline-block;
+    position: relative;
+    color: black;
+    transition: color 0.4s ease;
+    cursor: pointer;
+    width: fit-content;
+    margin: 10px;
+}
+
+.navLinks .link:hover {
+    color: #0446F1;
+}
+
+.navLinks .link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #0446F1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.7s ease;
+}
+
+.navLinks .link:hover::after {
+    transform: scaleX(1);
+}
+
+
+.logoContainer {
+    flex-shrink: 0;
+    z-index: 20;
+}
+
+.logo {
+    height: auto;
+    max-height: 40px;
+    width: auto;
+}
+
+.headerNavigation {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.link:hover {
+    color: #0446F1;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.address {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.phoneButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0446F1;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.phoneButton:hover {
+    background: #0339cc;
+}
+
+.phoneIcon {
+    flex-shrink: 0;
+}
+
+.burgerButton {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .burgerButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #0446F1;
+        z-index: 20;
+        padding: 0.5rem;
+    }
+
+    .headerNavigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        padding: 5rem 1.5rem 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .headerNavigation.active {
+        right: 0;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .link {
+        font-size: 1.125rem;
+        padding: 0.75rem 0;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .closeButton {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #0446F1;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .contacts {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .navLinks {
+        gap: 1rem;
+    }
+
+    .address {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header {
+        padding: 1rem 5rem;
+    }
+}
+
+
+@media (min-width: 1924px) {
+    .header {
+        height: auto;
+    }
+
+    .link {
+        font-size: 30px;
+    }
+
+    .address {
+        font-size: 30px;
+    }
+
+    .logo {
+        height: 70px;
+        max-height: 100px;
+        width: auto;
+    }
+
+    .phoneButton {
+        height: 50px;
+        width: 150px;
+    }
+
+    .phoneButton span {
+       font-size: 20px;
+    }
+}

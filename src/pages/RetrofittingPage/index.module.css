@@ -1,0 +1,89 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../images/lines.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.section h2 {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    color: #0446F1;
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 30vw;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    max-width: 2000px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+
+.main_section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 120px;
+}
+
+.blocks {
+    width: 100%;
+    max-width: 325px;
+    min-width: 305px;
+    height: 375px;
+    padding: 20px;
+    background: #FAFAFA;
+    border-radius: 30px;
+    box-shadow: 20px 20px 50px 10px #0446F11A;
+}
+
+.blocks p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #0446F1;
+}
+
+
+@media screen and (max-width: 724px) {
+
+    .main_section {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    .blocks {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 200px;
+        height: auto;
+    }
+
+
+    .section h2 {
+        font-family: Montserrat;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 72px;
+        letter-spacing: -0.015em;
+        color: #0446F1;
+        margin-left: 20px;
+        /*margin-top: 50px;*/
+    }
+}

@@ -1,0 +1,143 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../images/service.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 133px) top;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.main_blocks {
+    display: flex;
+    flex-direction: column;
+    margin: 20vh 0 0 14vw;
+}
+
+.main_blocks h2 {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    color: #0446F1;
+    margin-bottom: 74px;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+
+.first_blocks, .second_blocks {
+    width: 100%;
+    max-width: 325px;
+    height: 375px;
+    background: #FAFAFA;
+    box-shadow: 20px 20px 50px 10px #0446F11A;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.first_blocks:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+}
+
+
+.second_blocks:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+}
+
+
+.first_blocks p, .second_blocks p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #0446F1;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+@media (max-width: 880px) {
+    .blocks {
+        display: block;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first_blocks, .second_blocks {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+
+    .first_blocks p, .second_blocks p {
+        padding: 10px 0 0 30px;
+    }
+
+    .main_blocks {
+        margin: 20px;
+    }
+
+    .main_blocks h2 {
+        font-family: Montserrat;
+        font-size: 38px;
+        margin-bottom: 74px;
+    }
+
+
+    .main {
+        background-size: 100% 100%;
+    }
+
+}
+
+
+@media (min-width: 1920px) {
+    .main_blocks h2 {
+        font-family: Montserrat;
+        font-size: 68px;
+        margin-bottom: 74px;
+    }
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../../images/service.svg");
+        background-repeat: no-repeat;
+        /*background-position: calc(100% - 33px) top;*/
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        background-size: 60% 60%;
+    }
+
+    .first_blocks, .second_blocks {
+        width: 100%;
+        max-width: 700px;
+        height: 600px;
+    }
+
+    .first_blocks p, .second_blocks p {
+        font-size: 30px;
+        padding: 30px 0 0 30px;
+    }
+
+    .main_blocks {
+        margin-left: 14%;
+    }
+}
+
+
+
