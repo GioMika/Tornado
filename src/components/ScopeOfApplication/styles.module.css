@@ -5,6 +5,106 @@
     overflow: hidden;
     position: relative;
 }
+.mobileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .mobileContainer img {
+    width: 100%; /* Занимает всю ширину контейнера */
+    max-width: 500px; /* Максимальная ширина изображения */
+    min-width: 200px; /* Минимальная ширина изображения */
+    height: auto; /* Сохраняет пропорции */
+    display: block;
+  }
+  .block_widgets {
+    margin: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 100px;
+}
+
+.widget_right{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 50px;
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        padding-left: 29px;
+}
+  .widget_left {
+    display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 50px;
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        padding-left: 29px;
+}
+.widget_left .img{
+        float: left;
+        width: 44px;
+        height: 69px;
+        margin-left: -60px;
+    
+}
+
+.widgets_title_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 69px;
+    gap: 20px;
+}
+
+.widget_right .img{
+   
+    width: 44px;
+    height: 69px;
+    margin-right: -50px;
+
+}
+
+
+
+
+
+.widgets_title_right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-left: 69px;
+    gap: 20px;
+}
+
+.widget_left:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+}
+
+
+
+
+
 
 .main_title_block {
     margin: 0 auto;
@@ -172,123 +272,15 @@
     margin-top: 2rem;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-    .layout_container {
-        width: 90%;
-    }
 
-    .middle_section {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .left_side,
-    .right_side {
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    .duble_images {
-        width: min(60vw, 500px);
-        margin: 2rem 0;
-    }
-
-    .icons_block_del,
-    .icons_block_search {
-        width: min(80vw, 510px);
-    }
-
-}
 
 @media (max-width: 724px) {
-    .main_title_block {
-        padding-left: 1rem;
-        text-align: center;
+    .widgets_title_left {
+        margin-left: 5px;
+        gap: 10px;
     }
-
-    .layout_container {
-        width: 95%;
-    }
-
-    .top_row,
-    .bottom_row {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .middle_section {
-        gap: 1rem;
-    }
-
-    .left_side,
-    .right_side {
-        flex-direction: column;
-    }
-
-    .duble_images {
-        width: min(90vw, 400px);
-    }
-
-    /* Mobile layout with alternating text */
-    .icons_block,
-    .icons_block_del,
-    .icons_block_search {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-        border-radius: 20px;
-        height: auto;
-        min-height: 100px;
-    }
-
-    .icons_block img,
-    .icons_block_del img,
-    .icons_block_search img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-    }
-
-    /* Alternate layout for even/odd items */
-    .left_side>div:nth-child(odd),
-    .right_side>div:nth-child(odd),
-    .top_row>div:nth-child(odd),
-    .bottom_row>div:nth-child(odd) {
-        flex-direction: row;
-    }
-
-    .left_side>div:nth-child(even),
-    .right_side>div:nth-child(even),
-    .top_row>div:nth-child(even),
-    .bottom_row>div:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-}
-
-@media (min-width: 1921px) {
-    .layout_container {
-        max-width: 1800px;
-    }
-
-    .icons_block {
-        width: 250px;
-        height: 250px;
-    }
-
-    .duble_images {
-        width: min(35vw, 800px);
-    }
-
-    .icons_block_del {
-        width: min(25vw, 600px);
-    }
-
-    .icons_block_search {
-        width: min(35vw, 800px);
+    .widgets_title_right{
+        margin: 10px -20px 0 0px;
+        gap: 10px;
     }
 }
