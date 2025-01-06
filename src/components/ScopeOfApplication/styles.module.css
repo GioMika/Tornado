@@ -186,12 +186,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(100px, 15vw, 199px);
+    width: clamp(80px, 15vw, 199px);
     height: clamp(100px, 15vw, 199px);
     background: #FFFFFF;
     border-radius: 50%;
     box-shadow: 0 4px 4px rgba(4, 70, 241, 0.1);
     transition: transform 0.3s ease;
+}
+
+.icon_img{
+    width: clamp(50px, 8vw, 100px);
+    height: clamp(50px, 8vw, 100px);
 }
 
 .icons_block_del_hor {
@@ -216,7 +221,7 @@
     flex-direction: column;
     padding: 40px;
     gap: 30px;
-    width: min(30vw, 450px);
+    width: min(25vw, 450px);
     min-height: auto;
     border-radius: 91px;
     background: rgba(255, 255, 255, 0.8);
@@ -272,9 +277,13 @@
     margin-top: 2rem;
 }
 
+.duble_images img{
+    width: 100%; /* Картинка займет всю ширину контейнера */
+    max-width: 600px; /* Но не станет больше 600px */
+    height: auto; /* Сохраняет пропорции */
+}
 
-
-@media (max-width: 724px) {
+/* @media (max-width: 724px) {
     .widgets_title_left {
         margin-left: 5px;
         gap: 10px;
@@ -283,4 +292,4 @@
         margin: 10px -20px 0 0px;
         gap: 10px;
     }
-}
+} */
