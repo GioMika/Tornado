@@ -5,6 +5,7 @@ const ContactsPage = () => {
 	return (
 		 <main className={classes.main}>
 			 <section className={classes.section}>
+				<div className={classes.bgImg}>
 				 <form className={classes.block_forms}>
 					 <h2>Свяжитесь с нами или закажите обратный звонок</h2>
 					 <div className={classes.block_form}>
@@ -26,9 +27,10 @@ const ContactsPage = () => {
 						 </div>
 					 </div>
 				 </form>
-				 <div className={classes.block_img}>
-					 <img src={backgroundForms} alt=""/>
 				 </div>
+				 {/* <div className={classes.block_img}>
+					 <img src={backgroundForms} alt=""/>
+				 </div> */}
 			 </section>
 		 </main>
 	);
