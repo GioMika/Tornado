@@ -19,12 +19,14 @@
   }
   
   .mobileContainer img {
-    width: 100%; /* Занимает всю ширину контейнера */
-    max-width: 500px; /* Максимальная ширина изображения */
-    min-width: 200px; /* Минимальная ширина изображения */
-    height: auto; /* Сохраняет пропорции */
+    width: 100%; 
+    max-width: 500px; 
+    min-width: 200px; 
+    height: auto; 
     display: block;
   }
+
+
   .block_widgets {
     margin: 40px 10px;
     display: flex;
@@ -47,7 +49,7 @@
         padding-left: 29px;
 }
   .widget_left {
-    display: flex;
+        display: flex;
         align-items: center;
         width: 100%;
         height: auto;
@@ -71,7 +73,7 @@
     display: flex;
     flex-direction: column;
     text-align: start;
-    margin-left: 69px;
+    margin-left: 20px;
     gap: 20px;
 }
 
@@ -92,7 +94,7 @@
     display: flex;
     flex-direction: column;
     text-align: end;
-    margin-left: 69px;
+    margin-left: 20px;
     gap: 20px;
 }
 
@@ -151,7 +153,7 @@
 .middle_section {
     display: flex;
     justify-content: space-between;
-    /* gap: 10px; */
+
     align-items: center;
     width: 100%;
     position: relative;
@@ -181,7 +183,7 @@
 }
 
 
-/* Base icon block */
+
 .icons_block {
     display: flex;
     align-items: center;
@@ -215,7 +217,6 @@
 }
 
 
-/* Special blocks */
 .icons_block_del {
     display: flex;
     flex-direction: column;
@@ -228,7 +229,6 @@
     box-shadow: 0 10px 10px 10px rgba(227, 227, 227, 0.25);
     transition: transform 0.3s ease;
     max-width: 100%;
-    /* Убедитесь, что содержимое не выходит за рамки */
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-sizing: border-box;
@@ -245,7 +245,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* width: min(40vw, 693px); */
+
     width: min(40vw, 693px);
     height: auto;
     border-radius: 91px;
@@ -253,7 +253,7 @@
     box-shadow: 0 10px 10px 10px rgba(227, 227, 227, 0.25);
     transition: transform 0.3s ease;
     max-width: 90%;
-    /* Убедитесь, что содержимое не выходит за рамки */
+
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-sizing: border-box;
@@ -262,7 +262,6 @@
 .icons_block_del p,
 .icons_block_search p {
     font-size: clamp(0.875rem, 1.5vw, 1.0rem);
-    /* Минимум 0.875rem, максимум 1.25rem */
     line-height: 1.2;
 }
 
@@ -270,7 +269,6 @@
     transform: translateY(-5px);
 }
 
-/* Bottom row */
 .bottom_row {
     display: flex;
     gap: clamp(2rem, 4vw, 4rem);
@@ -278,18 +276,8 @@
 }
 
 .duble_images img{
-    width: 100%; /* Картинка займет всю ширину контейнера */
-    max-width: 600px; /* Но не станет больше 600px */
-    height: auto; /* Сохраняет пропорции */
+    width: 100%;
+    max-width: 600px; 
+    height: auto; 
 }
 
-/* @media (max-width: 724px) {
-    .widgets_title_left {
-        margin-left: 5px;
-        gap: 10px;
-    }
-    .widgets_title_right{
-        margin: 10px -20px 0 0px;
-        gap: 10px;
-    }
-} */
