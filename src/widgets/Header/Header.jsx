@@ -49,7 +49,7 @@ const Header = () => {
 	return (
 		 <header className={classes.header}>
 			 <Link to="/" className={classes.logoContainer}>
-				 <img src={logo} alt="Logo" className={classes.logo} />
+				 <img src={logo} alt="Logo" className={classes.logo}/>
 			 </Link>
 
 			 {isMobile && (
@@ -58,7 +58,7 @@ const Header = () => {
 						 onClick={toggleMenu}
 						 aria-label="Меню"
 					>
-						{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+						{isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
 					</button>
 			 )}
 
@@ -74,7 +74,7 @@ const Header = () => {
 							 onClick={closeMenu}
 							 aria-label="Закрыть меню"
 						>
-							<X size={24} />
+							<X size={24}/>
 						</button>
 				 )}
 
@@ -94,10 +94,10 @@ const Header = () => {
 
 			 <div className={classes.contacts}>
 				 <p className={classes.address}>Адрес и часы работы</p>
-				 <Button className={classes.phoneButton}>
-					 <Phone size={16} className={classes.phoneIcon} />
+				 <a href="tel:+903-903-90-03" className={classes.phoneButton}>
+					 <Phone size={16} className={classes.phoneIcon}/>
 					 <span>Телефон</span>
-				 </Button>
+				 </a>
 			 </div>
 		 </header>
 	);

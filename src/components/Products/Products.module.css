@@ -153,7 +153,8 @@ li::marker {
     box-shadow: 20px 20px 50px 10px #0446F11A;
     border-radius: 30px;
     margin-top: 60px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
     transform-style: preserve-3d;
 }
 
@@ -249,7 +250,7 @@ li::marker {
 
     .main_title h2 {
         font-family: Montserrat;
-        font-size: 28px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 32px;
         letter-spacing: -0.015em;
@@ -257,6 +258,7 @@ li::marker {
         margin-bottom: 20px;
 
     }
+
 
     .title_tornado_oko {
         display: none;

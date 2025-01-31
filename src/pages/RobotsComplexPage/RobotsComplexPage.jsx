@@ -2,7 +2,6 @@ import classes from './index.module.css'
 import Button from "../../helpers/Button/Button";
 import robot from "../../images/robot2.svg";
 import robot_2 from "../../images/robot_2.svg";
-import oko from "../../images/oko.svg";
 
 const RobotsComplexPage = () => {
 	return (

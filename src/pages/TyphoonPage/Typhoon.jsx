@@ -18,7 +18,7 @@ import resize from "../../images/resize.svg";
 import oko from "../../images/ok.svg";
 import backgroundForms from "../../images/BackgroundForm.png";
 
-const ТyphoonPage = () => {
+const TyphoonPage = () => {
 	return (
 		 <main className={classes.main}>
 			 <section className={classes.tornado_block}>
@@ -228,4 +228,4 @@ const ТyphoonPage = () => {
 	);
 };
 
-export default ТyphoonPage;
+export default TyphoonPage;

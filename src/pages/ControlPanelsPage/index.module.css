@@ -61,6 +61,13 @@
     background: #FAFAFA;
     box-shadow: 20px 20px 50px 10px #0446F11A;
     padding: 20px 0 0 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.blocks:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
 }
 
 

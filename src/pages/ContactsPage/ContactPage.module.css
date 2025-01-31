@@ -1,18 +1,20 @@
-main {
+.main {
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../../images/BackgroundF.png');
+    background-image: url("../../images/BackgroundF.png");
 }
 
 .container {
-    background-image: url('../../images/BackgroundForm.png');
+    width: 100%;
+    background-image: url("../../images/BackgroundForm.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
     max-width: 1200px;
+    min-height: 100px;
     aspect-ratio: 16 / 9;
     display: flex;
     flex-direction: column;
@@ -21,12 +23,12 @@ main {
     padding: 70px 200px;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
 }
 
-h2 {
+.conect {
     max-width: 350px;
     text-align: center;
     font-size: 24px;
@@ -40,7 +42,7 @@ h2 {
     align-items: center;
 }
 
-input {
+.input {
     width: clamp(250px, 25vw, 350px);
     height: clamp(35px, 5vh, 45px);
     padding: 0.75rem;
@@ -53,7 +55,7 @@ input {
     margin-bottom: 15px;
 }
 
-textarea {
+.textarea {
     width: clamp(250px, 25vw, 350px);
     height: clamp(60px, 10vh, 80px);
     padding: 0.75rem;
@@ -67,16 +69,8 @@ textarea {
     margin-bottom: 15px;
 }
 
-p {
-    text-align: end;
-    font-family: Montserrat;
-    font-size: clamp(14px, 1.2vw, 18px);
-    font-weight: 400;
-    line-height: 1.6;
-    color: #000000;
-}
 
-button {
+.button {
     width: clamp(183px, 25vw, 183px);
     height: clamp(35px, 5vh, 45px);
     background-color: #0446F1;
@@ -89,48 +83,66 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-color: #0d43cd;
 }
 
 .btn_settings {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
     .container {
-        padding: 50px 100px;
+        width: 100%;
+        background-image: url("../../images/BackgroundForm.png");
+        height: 100vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+       /*padding-bottom: 150px;*/
     }
 
-    input,
-    textarea {
+    .input,
+    .textarea {
         width: 250px;
         height: 45px;
+        margin-bottom: 5px;
+    }
+    .textarea {
+        margin-bottom: 10px;
     }
 
-    h2 {
-        font-size: 22px;
-        line-height: 32px;
+    .conect {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 10px;
+       margin-top: -20px;
+
     }
 
-    p {
-        font-size: clamp(13px, 1.1vw, 16px);
-    }
-
-    button {
+    .button {
         font-size: 14px;
     }
+
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        width: 700px;
-        height: 800px;
-        /* padding: 40px 50px; */
-        background-image: url('../../images/bgFormMob.svg');
 
+
+
+@media screen and (max-width: 724px) {
+    .container {
+        width: 100%;
+        min-width: 310px;
+        height: 800px;
+        padding: 40px;
+        background-image: url("../../images/bgFormMob.svg");
+        background-repeat: no-repeat;
+        margin-right: 20px;
+        padding-left: 50px;
     }
 
 
@@ -138,11 +150,11 @@ button:hover {
         display: none;
     }
 
-    h2 {
-        font-size: 20px;
+    .conect {
+        font-size: 16px;
         width: 300px;
-        line-height: 28px;
-        margin-bottom: 30px;
+        line-height: 20px;
+        margin-bottom: 20px;
     }
 
     .input_settings {
@@ -150,50 +162,16 @@ button:hover {
         align-items: flex-start;
     }
 
-    input,
-    textarea {
+    .input,
+    .textarea {
         margin-left: 0;
         margin-top: 8px;
         width: 250px;
     }
 
-    p {
-        text-align: left;
-        font-size: clamp(12px, 1vw, 14px);
-    }
-
-    button {
+    .button {
         font-size: 13px;
         width: 100%;
     }
 
-}
-
-@media screen and (max-width: 480px) {
-    .container {
-        padding: 30px 20px;
-        width: 500px;
-        height: 700px;
-    }
-
-    h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 25px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-    input,
-    textarea {
-        font-size: 12px;
-        padding: 0.5rem;
-    }
-
-    button {
-        font-size: 12px;
-        height: 40px;
-    }
 }

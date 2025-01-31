@@ -1,8 +1,11 @@
 import classes from './Main.module.css';
 import Button from "../../helpers/Button/Button";
 import ScopeOfApplication from "../ScopeOfApplication/ScopeOfApplication";
+import Features from "../Features/Features";
+import React from "react";
 
 const Main = () => {
+
 	return (
 		 <>
 			 <main>
@@ -18,6 +21,7 @@ const Main = () => {
 					 </div>
 				 </div>
 			 </main>
+			 {/*<Features />*/}
 			 <ScopeOfApplication/>
 		 </>
 	);

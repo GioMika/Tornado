@@ -11,7 +11,7 @@ const Footer = () => {
 					 <img className={classes.logo} src={logo} alt=""/>
 					 <img className={classes.logoMobile} src={logoMobile} alt=""/>
 					 <div className={classes.paragraph_block}>
-						 <p className={classes.a}>Адрес: ул. рроаып</p>
+						 <p>Адрес: ул. рроаып</p>
 						 <p> Телефон</p>
 						 <p>Почта</p>
 						 <div className={classes.span_block}>
@@ -66,6 +66,25 @@ const Footer = () => {
 
 				 <div className={classes.footer_mobile}>
 					 <div className={classes.products_mobile}>
+						 {/*<h2>Продукция</h2>*/}
+						 {/*<Link to="/robots">*/}
+							{/* <p>Модель 1</p>*/}
+						 {/*</Link>*/}
+						 {/*<Link to="/manipulators">*/}
+							{/* <p>Модель 2</p>*/}
+						 {/*</Link>*/}
+						 {/*<p>Модель 3</p>*/}
+						 {/*<Link to="/panels">*/}
+							{/* <p>Модель 4</p>*/}
+						 {/*</Link>*/}
+						 {/*<Link to="/retrofitting">*/}
+							{/* <p>Модель 5</p>*/}
+						 {/*</Link>*/}
+						 {/*<Link to="/accessories">*/}
+							{/* <p>Модель 6</p>*/}
+						 {/*</Link>*/}
+					 </div>
+					 <div className={classes.products_mobile}>
 						 <h2>Продукция</h2>
 						 <Link to="/robots">
 							 <p>Модель 1</p>
@@ -77,23 +96,21 @@ const Footer = () => {
 						 <Link to="/panels">
 							 <p>Модель 4</p>
 						 </Link>
-						 <Link to="/retrofitting">
-							 <p>Модель 5</p>
-						 </Link>
-						 <Link to="/accessories">
-							 <p>Модель 6</p>
-						 </Link>
-					 </div>
-					 <div className={classes.products_mobile}>
-						 <h2>Компания</h2>
+
+
+						 <h2 className={classes.company_title}>Компания</h2>
 						 <p>О нас</p>
 						 <p>Контакты</p>
 						 <p>Политика конфиденциальности</p>
 						 <p>FAQ</p>
+
+
+						 <h2 className={classes.company_title}>Услуги</h2>
+						 <p>Сервис</p>
 					 </div>
 					 <div className={classes.products_mobile}>
-						 <h2>Услуги</h2>
-						 <p>Сервис</p>
+						 {/*<h2>Услуги</h2>*/}
+						 {/*<p>Сервис</p>*/}
 					 </div>
 				 </div>
 

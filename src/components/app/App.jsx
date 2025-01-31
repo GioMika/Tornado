@@ -19,8 +19,8 @@ import RentPage from "../../pages/RentPage/RentPage";
 import LeasingPage from "../../pages/LeasingPage/LeasingPage";
 import EquippingPage from "../../pages/EquippingPage/EquippingPage";
 import TornadoPage from "../../pages/TornadoPage/TornadoPage";
-import TaifunPage from "../../pages/TaifunPage/TaifunPage";
-
+import TyphoonPage from "../../pages/TyphoonPage/Typhoon";
+import OkoPage from "../../pages/OkoPage/OkoPage";
 
 
 const App = () => {
@@ -43,7 +43,8 @@ const App = () => {
 				 <Route path="/leasing" element={<LeasingPage/>}/>
 				 <Route path="/equipping" element={<EquippingPage/>}/>
 				 <Route path="/tornado" element={<TornadoPage/>}/>
-				 <Route path="/typhoon" element={<TaifunPage/>}/>
+				 <Route path="/typhoon" element={<TyphoonPage/>}/>
+				 <Route path="/oko" element={<OkoPage/>}/>
 			 </Routes>
 			 <Footer/>
 		 </div>

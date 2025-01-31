@@ -20,11 +20,7 @@ const ScopeOfApplication = () => {
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
 
     const updateIsMobile = (e) => setIsMobile(e.matches);
-
-    // Установим начальное состояние
     updateIsMobile(mediaQuery);
-
-    // Используем современный addEventListener
     mediaQuery.addEventListener("change", updateIsMobile);
 
     return () => mediaQuery.removeEventListener("change", updateIsMobile);

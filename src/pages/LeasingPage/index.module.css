@@ -93,6 +93,14 @@
     backdrop-filter: blur(4px);
     border-radius: 50px;
     box-shadow: 0px 4px 4px 0px #00000040;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+
+}
+
+.blocks:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
 }
 
 
@@ -104,11 +112,18 @@
     height: 230px;
 }
 
+.all_blocks div:nth-child(6) {
+    p {
+        margin-top: 50px;
+    }
+}
+
 .block_title_img {
     display: flex;
     gap: 22px;
     padding-left: 22px;
     position: relative;
+    margin-top: -10px;
 }
 
 .block_title_img .imgs {

@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height:auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 
 
-.navLinks .link{
+.navLinks .link {
     display: inline-block;
     position: relative;
     color: black;
@@ -37,7 +37,7 @@
     background-color: #0446F1;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.7s ease;
+    transition: transform 0.4s ease;
 }
 
 .navLinks .link:hover::after {
@@ -103,6 +103,7 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
 }
 
 .phoneButton:hover {
@@ -248,6 +249,6 @@
     }
 
     .phoneButton span {
-       font-size: 20px;
+        font-size: 20px;
     }
 }
