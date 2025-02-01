@@ -115,6 +115,7 @@
 .icon_img {
     width: clamp(40px, 6vw, 80px);
     height: clamp(40px, 6vw, 80px);
+    border-top: 12px solid white; 
     
 }
 
@@ -190,7 +191,7 @@
         width: 100%;
         max-width: 400px;
         height: auto;
-        
+        border-top: 10px solid white;
         align-items: center;
     }
 
