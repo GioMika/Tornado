@@ -21,28 +21,24 @@ const ContactsPage = () => {
     };
     let isValid = true;
 
-    // Name validation
     const name = formData.get('user_name');
     if (!name || name.trim().length < 2) {
       newErrors.user_name = 'Имя должно содержать минимум 2 символа';
       isValid = false;
     }
 
-    // Phone validation
     const phone = formData.get('phone');
     if (!phone || !/^[0-9]{10,12}$/.test(phone)) {
       newErrors.phone = 'Введите корректный номер телефона (10-12 цифр)';
       isValid = false;
     }
 
-    // Email validation
     const email = formData.get('user_email');
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.user_email = 'Введите корректный email адрес';
       isValid = false;
     }
 
-    // Message validation
     const message = formData.get('message');
     if (!message || message.trim().length < 10) {
       newErrors.message = 'Сообщение должно содержать минимум 10 символов';
@@ -101,9 +97,15 @@ const ContactsPage = () => {
                 name="user_name" 
                 required
               />
-              {errors.user_name && <span className={classes.error_message}>{errors.user_name}</span>}
+              <span 
+                className={classes.error_message}
+                style={{ visibility: errors.user_name ? 'visible' : 'hidden' }}
+              >
+                {errors.user_name || ' '}
+              </span>
             </div>
           </div>
+
           <div className={classes.input_settings}>
             <label>Телефон</label>
             <div className={classes.input_wrapper}>
@@ -113,9 +115,15 @@ const ContactsPage = () => {
                 name="phone" 
                 required
               />
-              {errors.phone && <span className={classes.error_message}>{errors.phone}</span>}
+              <span 
+                className={classes.error_message}
+                style={{ visibility: errors.phone ? 'visible' : 'hidden' }}
+              >
+                {errors.phone || ' '}
+              </span>
             </div>
           </div>
+
           <div className={classes.input_settings}>
             <label>Почта</label>
             <div className={classes.input_wrapper}>
@@ -125,20 +133,32 @@ const ContactsPage = () => {
                 name="user_email" 
                 required
               />
-              {errors.user_email && <span className={classes.error_message}>{errors.user_email}</span>}
+              <span 
+                className={classes.error_message}
+                style={{ visibility: errors.user_email ? 'visible' : 'hidden' }}
+              >
+                {errors.user_email || ' '}
+              </span>
             </div>
           </div>
+
           <div className={classes.input_settings}>
-            <label>Message:</label>
+            <label>Сообщение</label>
             <div className={classes.input_wrapper}>
               <textarea 
                 className={`${classes.textarea} ${errors.message ? classes.error_input : ''}`}
                 name="message" 
                 required
               />
-              {errors.message && <span className={classes.error_message}>{errors.message}</span>}
+              <span 
+                className={classes.error_message}
+                style={{ visibility: errors.message ? 'visible' : 'hidden' }}
+              >
+                {errors.message || ' '}
+              </span>
             </div>
           </div>
+
           <div className={classes.btn_settings}>
             <img src={Social} alt=""/>
             <button className={classes.button} type="submit">Заказать звонок</button>

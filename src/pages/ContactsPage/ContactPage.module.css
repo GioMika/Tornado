@@ -4,12 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../../images/BackgroundF.png");
+    background-image: url("../../images/BackgroundF.png"); /* Оригинальный фон */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
     width: 100%;
-    background-image: url("../../images/BackgroundForm.png");
+    background-image: url("../../images/BackgroundForm.png"); /* Оригинальный фон формы */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,6 +25,7 @@
     justify-content: center;
     align-items: center;
     padding: 70px 200px;
+    box-sizing: border-box;
 }
 
 .form {
@@ -33,24 +38,26 @@
     text-align: center;
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .input_settings {
     display: flex;
     justify-content: end;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 15px;
+    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
 }
 
 .input_wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
+    min-width: 250px; /* Минимальная ширина для предотвращения сжатия */
 }
 
 .input {
-    width: clamp(250px, 25vw, 350px);
+    width: 350px; /* Оригинальный стиль */
     height: clamp(35px, 5vh, 45px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -58,10 +65,11 @@
     outline: none;
     font-size: clamp(14px, 1vw, 16px);
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .textarea {
-    width: clamp(250px, 25vw, 350px);
+    width: 350px; /* Оригинальный стиль */
     height: clamp(60px, 10vh, 80px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -70,20 +78,26 @@
     resize: none;
     font-size: clamp(14px, 1vw, 16px);
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .error_input {
-    border-color: #ff4444;
+    border-color: #ff4444; /* Красная рамка для ошибок */
 }
 
 .error_message {
     color: #ff4444;
     font-size: 12px;
+    min-height: 16px; 
+    visibility: hidden;
+    text-align: left;
+    display: block;
+    line-height: 1.2;
     margin-top: 4px;
 }
 
 .button {
-    width: clamp(183px, 25vw, 183px);
+    width: clamp(183px, 25vw, 183px); /* Оригинальный стиль */
     height: clamp(35px, 5vh, 45px);
     background-color: #0446F1;
     color: #FFFFFF;
@@ -93,6 +107,7 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -102,24 +117,20 @@
 .btn_settings {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
+    gap: 10px; /* Добавлен промежуток для адаптивности */
+    flex-wrap: wrap;
 }
 
-/* Media Queries */
+/* Адаптивные стили */
 @media screen and (max-width: 1024px) {
     .container {
-        width: 100%;
-        background-image: url("../../images/BackgroundForm.png");
-        height: 100vh;
-        background-size: contain;
-        background-repeat: no-repeat;
+        height: 900px;
+        padding: 40px 80px; 
+        background-image: url("../../images/bgFormMob.svg"); /* Оригинальный фон для мобильных */
+        background-size: 150% contain;
         background-position: center;
-        display: flex;
-    }
-
-    .input,
-    .textarea {
-        width: 250px;
     }
 
     .conect {
@@ -129,32 +140,44 @@
         margin-top: -20px;
     }
 
+    .input_settings {
+        flex-direction: column; /* Столбцовое расположение для узких экранов */
+        align-items: flex-start;
+    }
+
+    .input_wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .input,
+    .textarea {
+        width: 100%;
+    }
+
     .button {
         font-size: 14px;
+        width: 100%;
+    }
+
+    .btn_settings img {
+        display: none; /* Скрытие иконки для экономии места */
     }
 }
 
 @media screen and (max-width: 724px) {
     .container {
-        width: 100%;
-        min-width: 310px;
-        height: 800px;
-        padding: 40px;
-        background-image: url("../../images/bgFormMob.svg");
-        background-repeat: no-repeat;
-        margin-right: 20px;
-        padding-left: 50px;
-    }
-
-    .btn_settings img {
-        display: none;
+        padding: 20px;
+        background-image: url("../../images/bgFormMob.svg"); /* Оригинальный фон для мобильных */
+        background-size: contain;
+        background-position: center;
     }
 
     .conect {
-        font-size: 16px;
-        width: 300px;
+        font-size: 18px;
+        width: 100%;
         line-height: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .input_settings {
@@ -170,7 +193,8 @@
 
     .input,
     .textarea {
-        width: 250px;
+        width: 100%;
+        font-size: 13px;
     }
 
     .button {
