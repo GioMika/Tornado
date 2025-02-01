@@ -39,7 +39,14 @@
 .input_settings {
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
 }
 
 .input {
@@ -51,8 +58,6 @@
     outline: none;
     font-size: clamp(14px, 1vw, 16px);
     background: #FFFFFF;
-    margin-left: 50px;
-    margin-bottom: 15px;
 }
 
 .textarea {
@@ -65,10 +70,17 @@
     resize: none;
     font-size: clamp(14px, 1vw, 16px);
     background: #FFFFFF;
-    margin-left: 50px;
-    margin-bottom: 15px;
 }
 
+.error_input {
+    border-color: #ff4444;
+}
+
+.error_message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 4px;
+}
 
 .button {
     width: clamp(183px, 25vw, 183px);
@@ -90,7 +102,7 @@
 .btn_settings {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 /* Media Queries */
@@ -103,35 +115,24 @@
         background-repeat: no-repeat;
         background-position: center;
         display: flex;
-       /*padding-bottom: 150px;*/
     }
 
     .input,
     .textarea {
         width: 250px;
-        height: 45px;
-        margin-bottom: 5px;
-    }
-    .textarea {
-        margin-bottom: 10px;
     }
 
     .conect {
         font-size: 20px;
         line-height: 22px;
         margin-bottom: 10px;
-       margin-top: -20px;
-
+        margin-top: -20px;
     }
 
     .button {
         font-size: 14px;
     }
-
 }
-
-
-
 
 @media screen and (max-width: 724px) {
     .container {
@@ -144,7 +145,6 @@
         margin-right: 20px;
         padding-left: 50px;
     }
-
 
     .btn_settings img {
         display: none;
@@ -162,10 +162,14 @@
         align-items: flex-start;
     }
 
-    .input,
-    .textarea {
+    .input_wrapper {
         margin-left: 0;
         margin-top: 8px;
+        width: 100%;
+    }
+
+    .input,
+    .textarea {
         width: 250px;
     }
 
@@ -174,4 +178,7 @@
         width: 100%;
     }
 
+    .error_message {
+        font-size: 11px;
+    }
 }

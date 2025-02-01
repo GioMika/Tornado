@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classes from "./styles.module.css";
 import Features from "../Features/Features";
-// import background from "../../images/Background2.svg";
 import background2 from "../../images/robot_in_round.svg";
 import icons1 from "../../images/image1.svg";
 import icons2 from "../../images/image2.svg";
@@ -18,11 +17,9 @@ const ScopeOfApplication = () => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1024px)");
-
     const updateIsMobile = (e) => setIsMobile(e.matches);
     updateIsMobile(mediaQuery);
     mediaQuery.addEventListener("change", updateIsMobile);
-
     return () => mediaQuery.removeEventListener("change", updateIsMobile);
   }, []);
 
@@ -134,21 +131,65 @@ const ScopeOfApplication = () => {
               {/* Top row */}
               <div className={classes.top_row}>
                 <div className={classes.icons_block}>
-                  <img className={classes.icon_img} src={icons1} alt="Icon 1" />
+                  <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons1} alt="Icon 1" />
+                  <div className={classes.hover_content}>
+                    <div className={classes.icon_wrapper}>
+                      <img className={classes.icon_img} src={icons1} alt="Icon 1" />
+                      <h3>Разбор завалов</h3>
+                    </div>
+                    <p>
+                      Роботы представляют из себя прочную конструкцию и не рискуют
+                      жизнью при работе в хлипких конструкциях
+                    </p>
+                  </div>
                 </div>
                 <div className={classes.icons_block}>
-                  <img className={classes.icon_img} src={icons2} alt="Icon 2" />
+                  <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons2} alt="Icon 2" />
+                  <div className={classes.hover_content}>
+                    <div className={classes.icon_wrapper}>
+                      <img className={classes.icon_img} src={icons2} alt="Icon 2" />
+                      <h3>Визуальная/Радиационная/Инженерная разведка</h3>
+                    </div>
+                    <p>
+                      Поворотные камеры с большим оптическим увеличением или
+                      тепловизионным изображением, различные типы датчиков и
+                      сенсоров позволяют адаптировать робота под любую задачу
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Middle section with side elements */}
+              {/* Middle section */}
               <div className={classes.middle_section}>
                 <div className={classes.left_side}>
                   <div className={classes.icons_block}>
-                    <img className={classes.icon_img} src={icons3} alt="Icon 3" />
+                    <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons3} alt="Icon 3" />
+                    <div className={classes.hover_content}>
+                      <div className={classes.icon_wrapper}>
+                        <img className={classes.icon_img} src={icons3} alt="Icon 3" />
+                        <h3>Патруль местности</h3>
+                      </div>
+                      <p>
+                        Способность гибкой модификации системы позволяет
+                        настроить робота под уникальные задачи вашей территории,
+                        автоматизировать или дистанцировать необходимые процессы.
+                      </p>
+                    </div>
                   </div>
+
                   <div className={classes.icons_block}>
-                    <img className={classes.icon_img} src={icons5} alt="Icon 5" />
+                    <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons5} alt="Icon 5" />
+                    <div className={classes.hover_content}>
+                      <div className={classes.icon_wrapper}>
+                        <img className={classes.icon_img} src={icons5} alt="Icon 5" />
+                        <h3>Разминирование</h3>
+                      </div>
+                      <p>
+                        Дистанционное управление по радио или кабелю позволяет
+                        исключить риски при столь опасной работе, а бесчисленный
+                        список доп. оснащения еще и ускорит этот процесс
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -158,36 +199,68 @@ const ScopeOfApplication = () => {
 
                 <div className={classes.right_side}>
                   <div className={classes.icons_block}>
-                    <img className={classes.icon_img} src={icons4} alt="Icon 4" />
-                  </div>
-                  <div className={classes.icons_block_del}>
-                    <div className={classes.icons_block_del_hor}>
-                      <img className={classes.icon_img} src={icons6} alt="Icon 6" />
-                      <h1>Доставка грузов</h1>
+                    <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons4} alt="Icon 4" />
+                    <div className={classes.hover_content}>
+                      <div className={classes.icon_wrapper}>
+                        <img className={classes.icon_img} src={icons4} alt="Icon 4" />
+                        <h3>Измерение содержания хим. веществ</h3>
+                      </div>
+                      <p>
+                        У вас химическое предприятие с большой территорией?
+                        Запустите,оснащенного необходимым набором сенсоров, робота
+                        контролировать периметр и он выполнит подготовленный набор
+                        инструкций в случае утечки или аварии
+                      </p>
                     </div>
-                    <p>
-                      Роботы позволят автоматизировать маршрут доставки ваших
-                      грузов или избавят человека от физической работы при
-                      ручном управлении
-                    </p>
+                  </div>
+
+                  <div className={classes.icons_block}>
+                    <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons6} alt="Icon 6" />
+                    <div className={classes.hover_content}>
+                      <div className={classes.icon_wrapper}>
+                        <img className={classes.icon_img} src={icons6} alt="Icon 6" />
+                        <h3>Доставка грузов</h3>
+                      </div>
+                      <p>
+                        Роботы позволят автоматизировать маршрут доставки ваших
+                        грузов или избавят человека от физической работы при ручном
+                        управлении
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Bottom row */}
               <div className={classes.bottom_row}>
-                <div className={classes.icons_block_search}>
-                  <div className={classes.icons_block_del_hor}>
-                    <img className={classes.icon_img} src={icons7} alt="Icon 7" />
-                    <h1>Доставка грузов</h1>
-                  </div>
-                  <p>
-                    Агрессивная среда не станет преградой для робота при
-                    совершении спасательных миссий
-                  </p>
-                </div>
                 <div className={classes.icons_block}>
-                  <img className={classes.icon_img} src={icons8} alt="Icon 8" />
+                  <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons7} alt="Icon 7" />
+                  <div className={classes.hover_content}>
+                    <div className={classes.icon_wrapper}>
+                      <img className={classes.icon_img} src={icons7} alt="Icon 7" />
+                      <h3>Поисково-спасательные операции</h3>
+                    </div>
+                    <p>
+                      Агрессивная среда не станет преградой для робота при
+                      совершении спасательных миссий
+                    </p>
+                  </div>
+                </div>
+
+                <div className={classes.icons_block}>
+                  <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons8} alt="Icon 8" />
+                  <div className={classes.hover_content}>
+                    <div className={classes.icon_wrapper}>
+                      <img className={classes.icon_img} src={icons8} alt="Icon 8" />
+                      <h3>Создание фотореалистичных 3D карт местности</h3>
+                    </div>
+                    <p>
+                      Есть задача построить точную 3д карту местности, туннеля или
+                      шахты? Робот сможет сделать это в автоматическом режиме без
+                      перерыва на обед или исключить риски здоровью оператору при
+                      ручном управлении в небезопасных местах
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
