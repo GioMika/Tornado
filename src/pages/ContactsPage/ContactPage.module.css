@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../../images/BackgroundF.png"); /* Оригинальный фон */
+    background-image: url("../../images/BackgroundF.png"); 
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -13,7 +13,7 @@
 
 .container {
     width: 100%;
-    background-image: url("../../images/BackgroundForm.png"); /* Оригинальный фон формы */
+    background-image: url("../../images/BackgroundForm.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -46,18 +46,18 @@
     justify-content: end;
     align-items: center;
     margin-bottom: 15px;
-    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
+    flex-wrap: wrap; 
 }
 
 .input_wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    min-width: 250px; /* Минимальная ширина для предотвращения сжатия */
+    min-width: 250px; 
 }
 
 .input {
-    width: 350px; /* Оригинальный стиль */
+    width: 350px; 
     height: clamp(35px, 5vh, 45px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -69,7 +69,7 @@
 }
 
 .textarea {
-    width: 350px; /* Оригинальный стиль */
+    width: 350px; 
     height: clamp(60px, 10vh, 80px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -82,7 +82,7 @@
 }
 
 .error_input {
-    border-color: #ff4444; /* Красная рамка для ошибок */
+    border-color: #ff4444; 
 }
 
 .error_message {
@@ -97,7 +97,7 @@
 }
 
 .button {
-    width: clamp(183px, 25vw, 183px); /* Оригинальный стиль */
+    width: clamp(183px, 25vw, 183px); 
     height: clamp(35px, 5vh, 45px);
     background-color: #0446F1;
     color: #FFFFFF;
@@ -119,16 +119,15 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    gap: 10px; /* Добавлен промежуток для адаптивности */
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-/* Адаптивные стили */
 @media screen and (max-width: 1024px) {
     .container {
         height: 900px;
         padding: 40px 80px; 
-        background-image: url("../../images/bgFormMob.svg"); /* Оригинальный фон для мобильных */
+        background-image: url("../../images/bgFormMob.svg"); 
         background-size: 150% contain;
         background-position: center;
     }
@@ -141,7 +140,7 @@
     }
 
     .input_settings {
-        flex-direction: column; /* Столбцовое расположение для узких экранов */
+        flex-direction: column; 
         align-items: flex-start;
     }
 
@@ -161,14 +160,14 @@
     }
 
     .btn_settings img {
-        display: none; /* Скрытие иконки для экономии места */
+        display: none; 
     }
 }
 
 @media screen and (max-width: 724px) {
     .container {
         padding: 20px;
-        background-image: url("../../images/bgFormMob.svg"); /* Оригинальный фон для мобильных */
+        background-image: url("../../images/bgFormMob.svg"); 
         background-size: contain;
         background-position: center;
     }
