@@ -1,3 +1,4 @@
+
 .main {
     width: 100%;
     margin: 0 auto;
@@ -75,6 +76,7 @@
 }
 
 .icons_block {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,83 +85,96 @@
     background: #FFFFFF;
     border-radius: 50%;
     box-shadow: 0 4px 4px rgba(4, 70, 241, 0.1);
-    transition: transform 0.3s ease;
+    min-width: 80px;
+    min-height: 80px;
+    transition: 
+
+        box-shadow 0.6s ease-in-out,
+        border-radius 0.4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.icons_block:hover {
+    width: 400px;
+    height: auto;
+    min-height: 280px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+
+.icon_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .icon_img {
     width: clamp(40px, 6vw, 80px);
     height: clamp(40px, 6vw, 80px);
+    
 }
 
-.icons_block:hover {
-    transform: scale(1.05);
+.initial_icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.icons_block_del {
+.icons_block:hover .initial_icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.icons_block:hover .icon_img {
+    width: 50px;
+    height: 50px;
+    position: static;
+    transform: none;
+}
+
+.hover_content {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    gap: 20px;
-    width: 300px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(227, 227, 227, 0.25);
-    transition: transform 0.3s ease;
-}
-
-.icons_block_del_hor {
-    display: flex;
-    align-items: center;
     gap: 15px;
+    opacity: 0;
+   
+    visibility: hidden;
+    width: 100%;
 }
 
-.icons_block_del_hor h1 {
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+.icons_block:hover .hover_content {
+    opacity: 1;
+    visibility: visible;
 }
 
-.icons_block_del:hover {
-    transform: translateY(-5px);
+.hover_content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2;
+    margin: 0;
 }
 
-.icons_block_search {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 400px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(227, 227, 227, 0.25);
-    transition: transform 0.3s ease;
+.hover_content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 15px;
 }
 
-.icons_block_del p,
-.icons_block_search p {
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
-    line-height: 1.4;
-}
-
-.icons_block_search:hover {
-    transform: translateY(-5px);
-}
-
+/* Bottom row */
 .bottom_row {
     display: flex;
-    gap: clamp(1rem, 3vw, 3rem);
+    justify-content: center;
+    gap: clamp(1rem, 2vw, 2rem);
     margin-top: 1rem;
 }
 
-.duble_images {
-    width: min(100%, 400px);
-    margin: 0 20px;
-}
-
-.duble_images img {
-    width: 100%;
-    height: auto;
-}
-
-/* Mobile Layout */
 @media screen and (max-width: 1024px) {
     .mobileContainer {
         display: flex;
@@ -172,7 +187,9 @@
     .mobileContainer img {
         width: 100%;
         max-width: 400px;
-        margin: 0 auto 30px;
+        height: auto;
+        
+        align-items: center;
     }
 
     .block_widgets {
@@ -180,13 +197,14 @@
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        max-width: 100%;
+        
     }
 
     .widget_left,
     .widget_right {
         display: flex;
+        flex-direction: row;
         align-items: center;
         padding: 20px;
         background: #FFFFFF;
@@ -194,7 +212,8 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
         width: 100%;
-        height: 250px;
+        min-height: 150px;
+        height: auto;
     }
 
     .widget_left:hover,
@@ -204,15 +223,18 @@
 
     .widget_left .img,
     .widget_right .img {
-        width: 44px;
-        height: 44px;
+        width: 64px;
+        height: 64px;
         flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .widgets_title_left,
     .widgets_title_right {
         flex: 1;
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     .widgets_title_left {
@@ -225,14 +247,17 @@
 
     .widgets_title_left h2,
     .widgets_title_right h2 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 8px;
+        color: #0446F1;
+        font-weight: 600;
     }
 
     .widgets_title_left p,
     .widgets_title_right p {
-        font-size: 16px;
-        line-height: 1.4;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #666;
     }
 
     .main_block {
@@ -240,50 +265,37 @@
     }
 }
 
-
 @media screen and (max-width: 724px) {
-    .widget_right {
-        width: 100%;
-        height: 250px;
-        /*padding: 10px;*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        text-align: center;
-        word-wrap: break-word;
-        text-overflow: ellipsis;
-        font-size: 14px;
+    .block_widgets {
+        padding: 0 10px;
     }
 
-    .widgets_title_left p,
-    .widgets_title_right p {
-        width: 100%;
-        line-height: 15px;
-        font-size: 12px;
+    .widget_left,
+    .widget_right {
+        padding: 15px;
+        min-height: 120px;
+    }
+
+    .widget_left .img,
+    .widget_right .img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .widgets_title_left,
+    .widgets_title_right {
+        padding: 0 15px;
     }
 
     .widgets_title_left h2,
     .widgets_title_right h2 {
-        /*width: 200px;*/
         font-size: 14px;
-        margin-bottom: 8px;
-        color: #000000CC;
-
+        margin-bottom: 6px;
     }
 
-
-    .widget_left {
-        /*width: 100%;*/
-        height: 250px;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        text-align: center;
-        word-wrap: break-word;
-        text-overflow: ellipsis;
-        font-size: 14px;
+    .widgets_title_left p,
+    .widgets_title_right p {
+        font-size: 12px;
+        line-height: 1.4;
     }
 }
