@@ -150,7 +150,16 @@
     border-radius: 50px;
     background: #FFFFFF;
     padding-left: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
 }
+
+.block:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
+}
+
 
 .block img {
     width: 100px;
@@ -203,6 +212,14 @@
     border-radius: 50px;
     position: relative;
     padding: 0 10px 0 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.oko:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .oko img {

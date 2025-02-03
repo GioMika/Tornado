@@ -100,6 +100,7 @@ li::marker {
 .block:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .robot {

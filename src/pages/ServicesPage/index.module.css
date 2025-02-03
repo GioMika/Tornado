@@ -72,6 +72,7 @@
 .block_updating:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .title_updating {
@@ -119,6 +120,7 @@
 .block_leasing:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .title_leasing {
@@ -151,6 +153,7 @@
 .block_improvement:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .title_improvement h2 {
@@ -185,6 +188,7 @@
 .block_rent:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 

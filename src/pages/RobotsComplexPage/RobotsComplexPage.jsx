@@ -2,15 +2,21 @@ import classes from './index.module.css'
 import Button from "../../helpers/Button/Button";
 import robot from "../../images/robot2.svg";
 import robot_2 from "../../images/robot_2.svg";
+import {useNavigate} from "react-router-dom";
 
 const RobotsComplexPage = () => {
+	const navigate = useNavigate();
+	const handelNavigate = (path) => {
+		navigate(path)
+	}
+
 	return (
 		 <div className={classes.container}>
 			 <div className={classes.main_title}>
 				 <h2 className={classes.h2}>Роботизированные <br/> комплексы</h2>
 			 </div>
 			 <div className={classes.topBlocks}>
-				 <div className={classes.block}>
+				 <div onClick={() => handelNavigate('/tornado')} className={classes.block}>
 					 <div className={classes.textBlock}>
 						 <h2 className={classes.title_tornado}>Торнадо (колесно-шагающий)</h2>
 						 <h2 className={classes.title_tornado2}>Торнадо</h2>
@@ -24,7 +30,7 @@ const RobotsComplexPage = () => {
 						 <img className={classes.robot_2} src={robot_2} alt="Placeholder"/>
 					 </div>
 				 </div>
-				 <div className={classes.block}>
+				 <div onClick={() => handelNavigate('/typhoon')} className={classes.block}>
 					 <div className={classes.textBlock}>
 						 <h2 className={classes.title_tornado}>Тайфун (колесно-шагающий)</h2>
 						 <h2 className={classes.title_tornado2}>Тайфун</h2>
