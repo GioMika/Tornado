@@ -205,8 +205,10 @@
     .paragraph_block {
         width: 180px;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         margin-top: -1px;
+        align-items: end;
+
     }
 
     .paragraph_block p {
@@ -225,13 +227,10 @@
 
     .contacts {
         width: 100%;
+
         justify-items: end;
-    }
 
-    .paragraph_block {
-        align-items: end;
     }
-
 
     .main div:nth-child(1) {
         grid-column: 2;
@@ -250,7 +249,7 @@
     .products_mobile {
         display: flex;
         flex-direction: column;
-        margin-top: -30px;
+        margin-top: -60px;
 
     }
 

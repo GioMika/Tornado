@@ -66,25 +66,6 @@ const Footer = () => {
 
 				 <div className={classes.footer_mobile}>
 					 <div className={classes.products_mobile}>
-						 {/*<h2>Продукция</h2>*/}
-						 {/*<Link to="/robots">*/}
-							{/* <p>Модель 1</p>*/}
-						 {/*</Link>*/}
-						 {/*<Link to="/manipulators">*/}
-							{/* <p>Модель 2</p>*/}
-						 {/*</Link>*/}
-						 {/*<p>Модель 3</p>*/}
-						 {/*<Link to="/panels">*/}
-							{/* <p>Модель 4</p>*/}
-						 {/*</Link>*/}
-						 {/*<Link to="/retrofitting">*/}
-							{/* <p>Модель 5</p>*/}
-						 {/*</Link>*/}
-						 {/*<Link to="/accessories">*/}
-							{/* <p>Модель 6</p>*/}
-						 {/*</Link>*/}
-					 </div>
-					 <div className={classes.products_mobile}>
 						 <h2>Продукция</h2>
 						 <Link to="/robots">
 							 <p>Модель 1</p>
