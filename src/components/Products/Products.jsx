@@ -17,7 +17,7 @@ const Products = () => {
 				 <div className={classes.topBlocks}>
 
 
-					 {/*<Link className={classes.link_reset} to="/tornado">*/}
+
 					 <div className={classes.block}>
 						 <div className={classes.textBlock}>
 							 <h2 className={classes.title_tornado}>Торнадо (колесно-шагающий)</h2>
@@ -25,7 +25,9 @@ const Products = () => {
 							 <div className={classes.paragraph}>
 								 <span>Колесно-шагающий мобильный робот малого класса с грузоподъемностью до 25кг.</span>
 							 </div>
-							 <Button className={classes.btns}>Подробнее</Button>
+							 <Link to='/tornado'>
+								 <Button className={classes.btns}>Подробнее</Button>
+							 </Link>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -43,7 +45,9 @@ const Products = () => {
 							 <div className={classes.para_robot}>
 								 <span>Колесно-шагающий мобильный робот среднего класса с грузоподъемностью до 115кг.</span>
 							 </div>
-							 <Button className={classes.btns}>Подробнее</Button>
+							 <Link to='/typhoon'>
+								 <Button className={classes.btns}>Подробнее</Button>
+							 </Link>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -71,7 +75,9 @@ const Products = () => {
 							 <li> В составе наших робототехнических комплексов</li>
 							 <li>Выносная система видеонаблюдения</li>
 							 <li> Отдельное устройство для комплектации оборудования заказчика</li>
-							 <Button className={classes.btn}>Подробнее</Button>
+							 <Link to='/oko'>
+								 <Button className={classes.btns}>Подробнее</Button>
+							 </Link>
 						 </div>
 					 </div>
 				 </div>
