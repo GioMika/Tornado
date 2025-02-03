@@ -101,11 +101,13 @@ li::marker {
     width: 767px;
     height: 474px;
     position: relative;
+
 }
 
 .block:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .robot {
@@ -164,6 +166,7 @@ li::marker {
 .fullWidthBlock:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .title_tornado {
