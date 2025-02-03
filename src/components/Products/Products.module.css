@@ -7,6 +7,7 @@
     margin-top: 120px;
     background: #FAFAFA;
     overflow: hidden;
+    margin: 0 auto;
 }
 .link_reset {
     text-decoration: none;
@@ -47,6 +48,7 @@
     letter-spacing: -0.015em;
     text-align: left;
     color: #0446F1;
+
 }
 
 .main_title p {
@@ -246,7 +248,8 @@ li::marker {
         justify-content: center;
         margin: 0 auto;
         padding-left: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
+        margin-top: 20px;
     }
 
     .main_title h2 {
@@ -498,6 +501,7 @@ li::marker {
     .main_title h2 {
         font-size: 66px;
     }
+
 
     .main_title p {
         font-size: 36px;
