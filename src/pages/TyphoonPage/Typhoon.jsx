@@ -17,6 +17,7 @@ import worktime from "../../images/work-time.svg";
 import resize from "../../images/resize.svg";
 import oko from "../../images/ok.svg";
 import backgroundForms from "../../images/BackgroundForm.png";
+import ContactsPage from "../ContactsPage/ContactsPage";
 
 const TyphoonPage = () => {
 	return (
@@ -200,29 +201,7 @@ const TyphoonPage = () => {
 						 </div>
 					 </div>
 				 </div>
-			 </section>
-
-
-			 <section className={classes.section}>
-				 <form className={classes.block_forms}>
-					 <h2>Свяжитесь с нами или закажите обратный звонок</h2>
-					 <div className={classes.block_form}>
-						 <div className={classes.contacts}>
-							 <p>ОТВЕТИМ НА</p>
-							 <p>ЛЮБЫЕ ВАШИ</p>
-							 <p>ВОПРОСЫ</p>
-						 </div>
-
-						 <div className={classes.forms}>
-							 <input type="text" placeholder='Имя'/>
-							 <input type="text" placeholder='Номер телефона'/>
-							 <textarea placeholder='Комментарий'/>
-						 </div>
-					 </div>
-				 </form>
-				 <div className={classes.block_img}>
-					 <img src={backgroundForms} alt=""/>
-				 </div>
+				 <ContactsPage/>
 			 </section>
 		 </main>
 	);

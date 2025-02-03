@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../../images/BackgroundF.png"); 
+    background-image: url("../../images/BackgroundF.png");
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -37,8 +37,9 @@
     max-width: 350px;
     text-align: center;
     font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 20px;
+    line-height: 26px;
+    margin-top: -40px;
+    padding-bottom: 20px;
 }
 
 .input_settings {
@@ -46,18 +47,18 @@
     justify-content: end;
     align-items: center;
     margin-bottom: 15px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .input_wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    min-width: 250px; 
+    min-width: 250px;
 }
 
 .input {
-    width: 350px; 
+    width: 350px;
     height: clamp(35px, 5vh, 45px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -69,7 +70,7 @@
 }
 
 .textarea {
-    width: 350px; 
+    width: 350px;
     height: clamp(60px, 10vh, 80px);
     padding: 0.75rem;
     border-radius: 10px;
@@ -82,13 +83,13 @@
 }
 
 .error_input {
-    border-color: #ff4444; 
+    border-color: #ff4444;
 }
 
 .error_message {
     color: #ff4444;
     font-size: 12px;
-    min-height: 16px; 
+    min-height: 16px;
     visibility: hidden;
     text-align: left;
     display: block;
@@ -97,7 +98,7 @@
 }
 
 .button {
-    width: clamp(183px, 25vw, 183px); 
+    width: clamp(183px, 25vw, 183px);
     height: clamp(35px, 5vh, 45px);
     background-color: #0446F1;
     color: #FFFFFF;
@@ -123,24 +124,25 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .container {
-        height: 900px;
-        padding: 40px 80px; 
-        background-image: url("../../images/bgFormMob.svg"); 
-        background-size: 150% contain;
-        background-position: center;
+        height: 100vh;
+        width: 100%;
+        background-image: url("../../images/bgFormMob.svg");
+        /*background-size: cover;*/
+        /*background-position: center;*/
+        /*background-repeat: no-repeat;*/
     }
 
     .conect {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 22px;
         margin-bottom: 10px;
-        margin-top: -20px;
+
     }
 
     .input_settings {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -160,33 +162,43 @@
     }
 
     .btn_settings img {
-        display: none; 
+        display: none;
     }
 }
 
-@media screen and (max-width: 724px) {
+@media (max-width: 724px) {
     .container {
-        padding: 20px;
-        background-image: url("../../images/bgFormMob.svg"); 
+        padding: 30px;
+        background-image: url("../../images/bgFormMob.svg");
         background-size: contain;
         background-position: center;
+        width: 100vw;
+        margin-right: 24px;
+        row-gap: 1px;
     }
 
     .conect {
         font-size: 18px;
         width: 100%;
-        line-height: 20px;
-        margin-bottom: 15px;
+        line-height: 16px;
+        margin-top: 4px;
+
+    }
+
+    .form {
+        gap: 1px;
+        row-gap: 2px;
     }
 
     .input_settings {
         flex-direction: column;
         align-items: flex-start;
+
     }
 
     .input_wrapper {
         margin-left: 0;
-        margin-top: 8px;
+        margin-top: 4px;
         width: 100%;
     }
 
