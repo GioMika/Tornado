@@ -9,6 +9,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    touch-action: none;
+    overscroll-behavior: none;
 }
 
 h1, h2, .special-text {
