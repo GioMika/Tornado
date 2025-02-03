@@ -128,7 +128,6 @@ const ScopeOfApplication = () => {
         ) : (
           <div className={classes.main_block}>
             <div className={classes.layout_container}>
-              {/* Top row */}
               <div className={classes.top_row}>
                 <div className={classes.icons_block}>
                   <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons1} alt="Icon 1" />
@@ -159,7 +158,6 @@ const ScopeOfApplication = () => {
                 </div>
               </div>
 
-              {/* Middle section */}
               <div className={classes.middle_section}>
                 <div className={classes.left_side}>
                   <div className={classes.icons_block}>
