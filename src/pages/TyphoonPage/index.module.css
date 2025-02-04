@@ -156,6 +156,15 @@
     border-radius: 50px;
     background: #FFFFFF;
     padding-left: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+
+.block:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .block img {
@@ -290,7 +299,7 @@
 }
 
 
-.oko {
+.oko{
     display: flex;
     justify-content: center;
     width: 80%;
@@ -300,7 +309,16 @@
     border: 1px solid #EEEEEE;
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
 }
+
+.oko:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
+}
+
 
 .oko img {
     height: 100%;

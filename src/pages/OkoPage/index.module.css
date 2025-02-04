@@ -150,7 +150,16 @@
     border-radius: 50px;
     background: #FFFFFF;
     padding-left: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
 }
+
+.block:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
+}
+
 
 .block img {
     width: 100px;
@@ -203,6 +212,14 @@
     border-radius: 50px;
     position: relative;
     padding: 0 10px 0 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.oko:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .oko img {
@@ -284,11 +301,6 @@
 }
 
 @media (max-width: 768px) {
-    .title_and_img h2:nth-child(1) {
-        font-size: clamp(2rem, 20vw, 34rem);
-        margin-right: 0;
-    }
-
     .tornado_subtitle {
         padding: 0 20px;
         margin-top: -30px;
@@ -357,11 +369,6 @@
 }
 
 @media (max-width: 480px) {
-    .title_and_img h2:nth-child(1) {
-        font-size: clamp(2rem, 15vw, 34rem);
-        padding-top: 40px;
-    }
-
     .tornado_subtitle p {
         font-size: 18px;
         line-height: 28px;

@@ -4,9 +4,15 @@ import robot_2 from '../../images/robot_2.svg';
 import oko from '../../images/oko.svg';
 import Button from "../../helpers/Button/Button";
 import Services from "../Services/Services";
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Products = () => {
+	const navigate = useNavigate();
+	const handelNavigate = (path) => {
+		navigate(path)
+	}
+
+
 	return (
 		 <>
 			 <div className={classes.container}>
@@ -16,16 +22,14 @@ const Products = () => {
 				 </div>
 				 <div className={classes.topBlocks}>
 
-
-					 {/*<Link className={classes.link_reset} to="/tornado">*/}
-					 <div className={classes.block}>
+					 <div onClick={() => handelNavigate('/tornado')} className={classes.block}>
 						 <div className={classes.textBlock}>
 							 <h2 className={classes.title_tornado}>Торнадо (колесно-шагающий)</h2>
 							 <h2 className={classes.title_tornado2}>Торнадо</h2>
 							 <div className={classes.paragraph}>
 								 <span>Колесно-шагающий мобильный робот малого класса с грузоподъемностью до 25кг.</span>
 							 </div>
-							 <Button className={classes.btns}>Подробнее</Button>
+								 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -34,16 +38,14 @@ const Products = () => {
 					 </div>
 
 
-
-
-					 <div className={classes.block}>
+					 <div onClick={() => handelNavigate('/typhoon')} className={classes.block}>
 						 <div className={classes.textBlock}>
 							 <h2 className={classes.title_tornado}>Тайфун (колесно-шагающий)</h2>
 							 <h2 className={classes.title_tornado2}>Тайфун</h2>
 							 <div className={classes.para_robot}>
 								 <span>Колесно-шагающий мобильный робот среднего класса с грузоподъемностью до 115кг.</span>
 							 </div>
-							 <Button className={classes.btns}>Подробнее</Button>
+								 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -52,10 +54,7 @@ const Products = () => {
 					 </div>
 				 </div>
 
-
-
-
-				 <div className={classes.fullWidthBlock}>
+				 <div onClick={() => handelNavigate('/oko')} className={classes.fullWidthBlock}>
 					 <div className={classes.imageBlock}>
 						 <img className={classes.oko} src={oko} alt="Placeholder"/>
 					 </div>
@@ -71,7 +70,7 @@ const Products = () => {
 							 <li> В составе наших робототехнических комплексов</li>
 							 <li>Выносная система видеонаблюдения</li>
 							 <li> Отдельное устройство для комплектации оборудования заказчика</li>
-							 <Button className={classes.btn}>Подробнее</Button>
+								 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 					 </div>
 				 </div>

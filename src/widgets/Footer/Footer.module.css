@@ -179,9 +179,13 @@
         padding-top: 100px;
     }
 
+
     .contacts {
         margin-left: -50px;
         margin-top: -60px;
+        width: 100%;
+        justify-items: end;
+        align-items: end;
     }
 
     .span_block {
@@ -204,7 +208,7 @@
     .paragraph_block {
         width: 180px;
         display: flex;
-        justify-content: center;
+        /*justify-content: end;*/
         margin-top: -1px;
         align-items: end;
 
@@ -224,11 +228,6 @@
         margin-left: 20px;
     }
 
-    .contacts {
-        width: 100%;
-        justify-items: end;
-
-    }
 
     .logoMobile {
         display: block;

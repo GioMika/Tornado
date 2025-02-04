@@ -39,23 +39,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
     padding: 0 20px;
 }
 
-/* Top row */
+
 .top_row {
     display: flex;
-    gap: clamp(1rem, 2vw, 2rem);
-    margin-bottom: 1rem;
+    gap: clamp(11rem, 12vw, 2rem);
+    padding-top: 150px;
+
 }
 
-/* Middle section */
 .middle_section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(1rem, 3vw, 3rem);
+    gap: clamp(-0rem, 3vw, 3rem);
     width: 100%;
     position: relative;
     margin: 1rem 0;
@@ -65,7 +64,7 @@
 .right_side {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vh, 2rem);
+    gap: clamp(8rem, 1vh, 1rem);
     width: 300px;
 }
 
@@ -99,8 +98,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    /*width: 300px;*/
-    /*height: 300px;*/
     background: #FFFFFF;
     border-radius: 50%;
     z-index: -1;
@@ -144,18 +141,19 @@
     padding: 20px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
     z-index: 10;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 25px;
     pointer-events: none;
+    /*gap: clamp(8rem, 1vh, 1rem);*/
 }
 
 .icons_block:hover .hover_content {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    width: 36vw;
+    width: 26vw;
 
 
 }
@@ -183,8 +181,7 @@
 .bottom_row {
     display: flex;
     justify-content: center;
-    gap: clamp(1rem, 2vw, 2rem);
-    margin-top: 1rem;
+    gap: clamp(12rem, 21vw, 2rem);
 }
 
 @media screen and (max-width: 1024px) {
