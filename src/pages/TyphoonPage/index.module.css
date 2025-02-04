@@ -123,7 +123,7 @@
 .peculiarities_block {
     width: 100%;
     height: 100%;
-    background-image: url("../../images/peculiarities.svg"); /*url("../../images/BackgroundF.png");*/
+    background-image: url("../../images/modifications.png");
     background-repeat: repeat;
     background-size: contain;
     background-position: center;
@@ -248,7 +248,8 @@
 .modifications {
     /*min-height: 100vh;*/
     width: 100%;
-    background-image: url("../../images/peculiarities.svg");
+    background-image: url("../../images/modifications.png");
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;

@@ -122,7 +122,8 @@
 .peculiarities_block {
     width: 100%;
     min-height: 500px;
-    background-image: url("../../images/peculiarities.svg");
+    background-image: url("../../images/modifications.png");
+
     background-repeat: repeat;
     background-size: auto;
     background-position: center;

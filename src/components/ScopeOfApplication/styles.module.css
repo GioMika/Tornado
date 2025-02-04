@@ -54,17 +54,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(-0rem, 3vw, 3rem);
-    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
     position: relative;
-    margin: 1rem 0;
 }
-
 .left_side,
 .right_side {
     display: flex;
     flex-direction: column;
-    gap: clamp(8rem, 1vh, 1rem);
+    gap: 2rem; 
     width: 300px;
 }
 
@@ -118,6 +116,14 @@
     position: relative;
 }
 
+.icon_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
 .icon_img {
     width: clamp(40px, 6vw, 80px);
     height: clamp(40px, 6vw, 80px);
@@ -134,7 +140,7 @@
 
 .hover_content {
     position: absolute;
-    left: 50%;
+    left: 100%;
     top: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% * 1.5);
@@ -149,14 +155,40 @@
     /*gap: clamp(8rem, 1vh, 1rem);*/
 }
 
+.hover_content_left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% * 1.5);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 25px;
+    pointer-events: none;
+    /*gap: clamp(8rem, 1vh, 1rem);*/
+}
+
+
 .icons_block:hover .hover_content {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     width: 26vw;
-
-
 }
+
+.icons_block:hover .hover_content_left {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    width: 16vw;
+}
+
+
+
 
 .icons_block:hover .initial_icon {
     opacity: 0;
@@ -183,6 +215,24 @@
     justify-content: center;
     gap: clamp(12rem, 21vw, 2rem);
 }
+
+.duble_images {
+    max-width: 400px; 
+    width: 100%;      
+    height: auto;     
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin: 0 auto;          
+}
+
+.duble_images img {
+    width: 100%;      
+    height: auto;    
+    object-fit: contain; 
+}
+
+
 
 @media screen and (max-width: 1024px) {
     .mobileContainer {

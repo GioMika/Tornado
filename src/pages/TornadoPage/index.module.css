@@ -123,11 +123,11 @@
 .peculiarities_block {
     width: 100%;
     height: 100%;
-    background-image: url("../../images/peculiarities.svg");
+    background-image: url("../../images/modifications.png");
     /*url("../../images/BackgroundF.png");*/
     background-repeat: repeat;
     background-size: contain;
-    background-position: center;
+    background-position: start;
 }
 
 .peculiarities_title {
@@ -251,7 +251,7 @@
 .modifications {
     /*min-height: 100vh;*/
     width: 100%;
-    background-image: url("../../images/peculiarities.svg");
+    background-image: url("../../images/modifications.png");
 
     background-repeat: no-repeat;
     background-size: contain;
@@ -509,6 +509,7 @@
 
 .block_galery {
     margin-bottom: 100px;
+   
 }
 
 @media (max-width: 1024px) {
