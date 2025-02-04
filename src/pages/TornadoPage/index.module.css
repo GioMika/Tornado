@@ -130,6 +130,17 @@
     background-position: start;
 }
 
+.tech_block {
+
+        
+        background-image: url("../../images/free-icon-mountains-102433\ 1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    
+    
+}
+
 .peculiarities_title {
     margin-bottom: 100px;
 }
