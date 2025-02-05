@@ -114,7 +114,6 @@
 .icon_wrapper {
     display: flex;
     align-items: center;
-    gap: 20px;
     width: 100%;
     position: relative;
 }
@@ -138,6 +137,7 @@
 .hover_content_left {
     position: absolute;
     width: 36vw;
+    min-height: 170px;
     padding: 10px 15px;
     opacity: 0;
     visibility: hidden;
@@ -164,7 +164,7 @@
 .left_side .icons_block .hover_content_left {
     right: -72%;
     top: 34%;
-    transform: translate(-2.2rem, -40%);
+    transform: translate(-2.2rem, -32%);
 
 }
 
@@ -200,7 +200,7 @@
 .bottom_row {
     display: flex;
     justify-content: center;
-    gap: clamp(4rem, 21vw, 6rem);
+    gap: clamp(4rem, 21vw, 5.2rem);
     margin-top: -18px;
 
 }
