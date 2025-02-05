@@ -177,7 +177,7 @@ const TornadoPage = () => {
           </div>
         </section>
       </main>
-      <ContactsPage />
+      <ContactsPage/>
     </>
   );
 };

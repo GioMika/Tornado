@@ -22,6 +22,7 @@ import RobotDescription from '../../components/RobotDesciption/RobotDescription'
 
 const TyphoonPage = () => {
 	return (
+		 <>
 		 <main className={classes.main}>
 			 <section className={classes.tornado_block}>
 				 <div className={classes.title_and_img}>
@@ -130,7 +131,7 @@ const TyphoonPage = () => {
 						<h2>Модификации</h2>
 						<p>Добавьте навесное оборудование под ваши уникальные задачи</p>
 					  </div>
-			
+
 					  <div className={classes.block_oko}>
 						<div className={classes.oko}>
 						  <div className={classes.oko_title}>
@@ -143,7 +144,7 @@ const TyphoonPage = () => {
 						  </div>
 						  <img src={oko} alt="" />
 						</div>
-			
+
 						<div className={classes.oko}>
 						  <div className={classes.oko_title}>
 							<h2>Модуль технического зрения для обхода препятствий</h2>
@@ -155,7 +156,7 @@ const TyphoonPage = () => {
 						  </div>
 						  <img src={oko} alt="" />
 						</div>
-			
+
 						<div className={classes.block_galery}>
 						  <div className={classes.galery_title}>
 							<h2>Галерея</h2>
@@ -164,8 +165,10 @@ const TyphoonPage = () => {
 						</div>
 					  </div>
 					</section>
-					<ContactsPage/>
+
 		 </main>
+			 <ContactsPage/>
+		 </>
 	);
 };
 

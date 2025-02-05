@@ -14,7 +14,7 @@ export default function RobotDescription() {
     right: { title: 'Скорость', value: '0-5 км/ч' },
   });
 
-  const [animation, setAnimation] = useState(false); 
+  const [animation, setAnimation] = useState(false);
 
   const specsList = [
     {
@@ -72,7 +72,7 @@ export default function RobotDescription() {
     setTimeout(() => {
       setSpecs(hoverData);
       setAnimation(false);
-    }, 200); // Небольшая задержка для анимации
+    }, 200);
   };
 
   return (

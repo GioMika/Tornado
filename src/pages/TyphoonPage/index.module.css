@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     height: 100%;
+    margin-bottom: 100px;
 }
 
 
@@ -8,7 +9,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /*justify-content: center;*/
 }
 
 .title_and_img h2:nth-child(1) {
@@ -132,13 +132,13 @@
 
 .tech_block {
 
-        
+
         background-image: url("../../images/free-icon-mountains-102433\ 1.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-    
-    
+
+
 }
 
 .peculiarities_title {
@@ -260,15 +260,14 @@
 
 
 .modifications {
-    /*min-height: 100vh;*/
     width: 100%;
+    height: 130vh;
     background-image: url("../../images/modifications.png");
-
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
+    background-size: cover;
+    background-position: center center;
     position: relative;
-    /*overflow: hidden;*/
+    padding-bottom: 100px;
 }
 
 .block_icons {
@@ -520,7 +519,7 @@
 
 .block_galery {
     margin-bottom: 100px;
-   
+
 }
 
 @media (max-width: 1024px) {
@@ -622,6 +621,10 @@
     .block_img {
         height: 50vh;
     }
+
+    .peculiarities_title h2 {
+        font-size: 38px;
+    }
 }
 
 @media (max-width: 724px) {
@@ -659,14 +662,17 @@
 
 
     .peculiarities_title h2 {
-        font-size: 38px;
-        margin-bottom: 1px;
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     .peculiarities_title p {
         font-size: 18px;
         line-height: 20px;
         padding: 0 10px;
+        text-align: center;
     }
 
     .all_blocks {
