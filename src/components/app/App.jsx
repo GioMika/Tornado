@@ -1,6 +1,6 @@
 import './App.css';
 import '@fontsource/montserrat';
-import '@fontsource/nunito';
+// import '@fontsource/nunito';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from '../../widgets/Header/Header';

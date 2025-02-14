@@ -14,15 +14,22 @@
 
 .main_title_block h2 {
     color: #0446F1;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:48px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     margin-bottom: 1rem;
-    text-align: center;
+    margin-top: 120px;
+    margin-left: 170px;
+    text-align: start;
 }
 
 .main_title_block p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #666;
-    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    text-align: start;
+    margin-left: 170px;
+
 }
 
 .main_block {
@@ -54,17 +61,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(-0rem, 3vw, 3rem);
-    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
     position: relative;
-    margin: 1rem 0;
 }
-
 .left_side,
 .right_side {
     display: flex;
     flex-direction: column;
-    gap: clamp(8rem, 1vh, 1rem);
+    gap: 2rem; 
     width: 300px;
 }
 
@@ -183,6 +188,24 @@
     justify-content: center;
     gap: clamp(12rem, 21vw, 2rem);
 }
+
+.duble_images {
+    max-width: 400px; 
+    width: 100%;      
+    height: auto;     
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin: 0 auto;          
+}
+
+.duble_images img {
+    width: 100%;      
+    height: auto;    
+    object-fit: contain; 
+}
+
+
 
 @media screen and (max-width: 1024px) {
     .mobileContainer {

@@ -71,7 +71,7 @@
 .link {
     text-decoration: none;
     color: #333;
-    font-size: 0.9375rem;
+    font-size: 15px;
     font-weight: 500;
     transition: color 0.2s ease;
     white-space: nowrap;
@@ -163,7 +163,8 @@
     }
 
     .link {
-        font-size: 1.125rem;
+        font-size: 15px;
+
         padding: 0.75rem 0;
         width: 100%;
         border-bottom: 1px solid #eee;
@@ -230,11 +231,11 @@
     }
 
     .link {
-        font-size: 30px;
+        font-size: 15px;
     }
 
     .address {
-        font-size: 30px;
+        font-size: 15px;
     }
 
     .logo {
