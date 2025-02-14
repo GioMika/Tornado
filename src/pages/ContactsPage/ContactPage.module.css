@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     background-image: url("../../images/BackgroundF.png");
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: end;
     padding: 20px;
     box-sizing: border-box;
 }

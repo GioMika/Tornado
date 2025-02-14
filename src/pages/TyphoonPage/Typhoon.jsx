@@ -18,9 +18,11 @@ import resize from "../../images/resize.svg";
 import oko from "../../images/ok.svg";
 import backgroundForms from "../../images/BackgroundForm.png";
 import ContactsPage from "../ContactsPage/ContactsPage";
+import RobotDescription from '../../components/RobotDesciption/RobotDescription';
 
 const TyphoonPage = () => {
 	return (
+		 <>
 		 <main className={classes.main}>
 			 <section className={classes.tornado_block}>
 				 <div className={classes.title_and_img}>
@@ -115,96 +117,62 @@ const TyphoonPage = () => {
 			 </section>
 
 
-			 <section className={classes.block_specifications}>
-				 <div className={classes.peculiarities_title}>
-					 <h2>Технические характеристики</h2>
-					 <p>Параметры робота </p>
-				 </div>
-
-
-				 <div className={classes.block_speed}>
-					 <div className={classes.range}>
-						 <p>Диапазон</p>
-						 <p>регулирования</p>
-						 <p>1000</p>
-					 </div>
-					 <img src={robot_2} alt=""/>
-
-					 <div className={classes.speed}>
-						 <p>Скорость</p>
-						 <p>0-5 км/ч</p>
-					 </div>
-				 </div>
-				 <section className={classes.block_icons}>
-					 <div className={classes.icons_paragraph}>
-						 <img src={speedometer} alt=""/>
-						 <p>Скорость</p>
-					 </div>
-					 <div className={classes.icons_paragraph}>
-						 <img src={barbel} alt=""/>
-						 <p>Грузоподъемность</p>
-					 </div>
-					 <div className={classes.icons_paragraph}>
-						 <img src={remote} alt=""/>
-						 <p>Управление по радио</p>
-					 </div>
-					 <div className={classes.icons_paragraph}>
-						 <img src={uneven2} alt=""/>
-						 <p>Допустимые препятствия</p>
-					 </div>
-					 <div className={classes.icons_paragraph}>
-						 <img src={worktime} alt=""/>
-						 <p>Продолжительность работы</p>
-					 </div>
-					 <div className={classes.icons_paragraph}>
-						 <img src={resize} alt=""/>
-						 <p>Размеры</p>
-					 </div>
-				 </section>
-			 </section>
+		<div className={classes.tech_block}>
+		  <div className={classes.peculiarities_title}>
+			<h2>Технические характеристики</h2>
+			<p>Параметры робота</p>
+		  </div>
+		  <RobotDescription />
+		</div>
 
 
 			 <section className={classes.modifications}>
-				 <div className={classes.peculiarities_title}>
-					 <h2>Модификации</h2>
-					 <p>Добавьте навесное оборудование под ваши уникальные задачи</p>
-				 </div>
+					  <div className={classes.peculiarities_title}>
+						<h2>Модификации</h2>
+						<p>Добавьте навесное оборудование под ваши уникальные задачи</p>
+					  </div>
 
+					  <div className={classes.block_oko}>
+						<div className={classes.oko}>
+						  <div className={classes.oko_title}>
+							<h2>Око</h2>
+							<p>
+							  Универсальная поворотная телекамера «Око» позволяет вести
+							  круглосуточное наблюдение в самых суровых условиях окружающей
+							  среды.
+							</p>
+						  </div>
+						  <img src={oko} alt="" />
+						</div>
 
-				 <div className={classes.block_oko}>
-					 <div className={classes.oko}>
-						 <div className={classes.oko_title}>
-							 <h2>Око</h2>
-							 <p>Универсальная поворотная телекамера «Око» позволяет
-								 вести круглосуточное наблюдение в
-								 самых суровых условиях окружающей среды.</p>
-						 </div>
-						 <img src={oko} alt=""/>
-					 </div>
+						<div className={classes.oko}>
+						  <div className={classes.oko_title}>
+							<h2>Модуль технического зрения для обхода препятствий</h2>
+							<p>
+							  Универсальная поворотная телекамера «Око» позволяет вести
+							  круглосуточное наблюдение в самых суровых условиях окружающей
+							  среды.
+							</p>
+						  </div>
+						  <img src={oko} alt="" />
+						</div>
 
+						<div className={classes.block_galery}>
+						  <div className={classes.galery_title}>
+							<h2>Галерея</h2>
+							<p>Посмотрите на роботов в работе</p>
+						  </div>
+						</div>
+					  </div>
+					</section>
 
-					 <div className={classes.oko}>
-						 <div className={classes.oko_title}>
-							 <h2>Модуль технического зрения для обхода препятствий</h2>
-							 <p>Универсальная поворотная телекамера «Око» позволяет
-								 вести круглосуточное наблюдение в самых
-								 суровых условиях окружающей среды.
-							 </p>
-						 </div>
-						 <img src={oko} alt=""/>
-					 </div>
-
-					 <div className={classes.block_galery}>
-						 <div className={classes.galery_title}>
-							 <h2>Галерея</h2>
-							 <p>Посмотрите на роботов в работе</p>
-						 </div>
-					 </div>
-				 </div>
-				 <ContactsPage/>
-			 </section>
 		 </main>
+			 <ContactsPage/>
+		 </>
 	);
 };
 
 export default TyphoonPage;
+
+
+//test

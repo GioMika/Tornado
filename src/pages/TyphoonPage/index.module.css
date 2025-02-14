@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     height: 100%;
+    margin-bottom: 100px;
 }
 
 
@@ -8,7 +9,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /*justify-content: center;*/
 }
 
 .title_and_img h2:nth-child(1) {
@@ -93,7 +93,7 @@
 }
 
 
-/*peculiarities_block*/
+
 
 .peculiarities_title {
     margin-left: 6%;
@@ -123,10 +123,22 @@
 .peculiarities_block {
     width: 100%;
     height: 100%;
-    background-image: url("../../images/peculiarities.svg"); /*url("../../images/BackgroundF.png");*/
+    background-image: url("../../images/modifications.png");
+    /*url("../../images/BackgroundF.png");*/
     background-repeat: repeat;
     background-size: contain;
-    background-position: center;
+    background-position: start;
+}
+
+.tech_block {
+
+
+        background-image: url("../../images/free-icon-mountains-102433\ 1.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+
 }
 
 .peculiarities_title {
@@ -166,6 +178,8 @@
     box-shadow: 0 4px 8px #6f95f2;
     cursor: pointer;
 }
+
+
 
 .block img {
     width: 100px;
@@ -246,14 +260,14 @@
 
 
 .modifications {
-    /*min-height: 100vh;*/
     width: 100%;
-    background-image: url("../../images/peculiarities.svg");
+    height: 130vh;
+    background-image: url("../../images/modifications.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
+    background-size: cover;
+    background-position: center center;
     position: relative;
-    /*overflow: hidden;*/
+    padding-bottom: 100px;
 }
 
 .block_icons {
@@ -299,7 +313,7 @@
 }
 
 
-.oko{
+.oko {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -312,6 +326,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
 }
+
 
 .oko:hover {
     transform: translateZ(10px);
@@ -404,8 +419,77 @@
     grid-row: 1;
 }
 
+.block_form {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(2rem, 5vw, 4rem);
+    position: relative;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vh, 1.5rem);
+    min-width: max-content;
+    padding-top: clamp(2rem, 5vh, 4rem);
+    align-self: end;
+}
 
+.contacts p {
+    text-align: end;
+    font-family: Montserrat;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.spans {
+    display: flex;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    justify-content: flex-end;
+}
+
+.spans span {
+    width: clamp(25px, 2.5vw, 35px);
+    height: clamp(25px, 2.5vw, 35px);
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vh, 1.5rem);
+    align-self: end;
+}
+
+.forms input {
+    width: clamp(250px, 25vw, 350px);
+    height: clamp(35px, 5vh, 45px);
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: clamp(14px, 1vw, 16px);
+    background: #FFFFFF;
+}
+
+.forms textarea {
+    width: clamp(250px, 25vw, 350px);
+    height: clamp(60px, 10vh, 80px);
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    resize: none;
+    font-size: clamp(14px, 1vw, 16px);
+    background: #FFFFFF;
+}
 
 .block_img {
     position: absolute;
@@ -433,6 +517,10 @@
 }
 
 
+.block_galery {
+    margin-bottom: 100px;
+
+}
 
 @media (max-width: 1024px) {
     .block {
@@ -518,10 +606,24 @@
         gap: 100px;
     }
 
+    .forms {
+        align-items: center;
+    }
 
+    .block_forms {
+        padding-top: 160px;
+    }
+
+    .section {
+        margin-top: -140px;
+    }
 
     .block_img {
         height: 50vh;
+    }
+
+    .peculiarities_title h2 {
+        font-size: 38px;
     }
 }
 
@@ -560,14 +662,17 @@
 
 
     .peculiarities_title h2 {
-        font-size: 38px;
-        margin-bottom: 1px;
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     .peculiarities_title p {
         font-size: 18px;
         line-height: 20px;
         padding: 0 10px;
+        text-align: center;
     }
 
     .all_blocks {
@@ -654,6 +759,44 @@
     }
 
 
+    .section {
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .block_form {
+        display: flex;
+        justify-content: space-around;
+        padding-right: 40px;
+    }
+
+    .block_forms h2 {
+        font-size: clamp(14px, 4vw, 16px);
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .forms input,
+    .forms textarea {
+        width: 35vw;
+        height: clamp(23px, 2vh, 45px);
+        padding: 10px;
+        font-size: clamp(10px, 3vw, 12px);
+    }
+
+    .forms {
+        gap: 5px;
+    }
+
+    .spans {
+        gap: 5px;
+    }
+
+    .spans span {
+        width: clamp(20px, 2.5vw, 35px);
+        height: clamp(20px, 2.5vw, 35px);
+    }
 
     .block_img {
         height: 40vh;
@@ -666,11 +809,22 @@
         object-fit: cover;
     }
 
+    .section h2 {
+        padding-top: 20px;
+        position: relative;
+        text-align: center;
+        align-self: center;
+        top: 5vh;
+    }
+
+    .contacts p {
+        font-size: clamp(12px, 3.5vw, 14px);
+    }
 }
 
 @media (min-width: 1921px) {
     .tornado_subtitle {
-        width: 76%;
+       width: 76%;
     }
 
     .tornado_subtitle p {
@@ -737,7 +891,7 @@
 
     .block img {
         width: 150px;
-        height: 16vh;
+       height: 16vh;
     }
 
 
@@ -781,6 +935,14 @@
         line-height: 40px;
     }
 
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+    }
 
 
     .block_img {
@@ -802,5 +964,17 @@
         object-fit: contain;
     }
 
+    .contacts {
+        padding-top: 0;
+    }
+
+    .contacts p {
+        font-size: 50px;
+    }
+
+    .spans span {
+        width: 50px;
+        height: 50px;
+    }
 }
 

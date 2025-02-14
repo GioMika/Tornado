@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./styles.module.css";
 import Features from "../Features/Features";
-import background2 from "../../images/robot_in_round.svg";
+import background2 from "../../images/Mask group.svg";
 import icons1 from "../../images/image1.svg";
 import icons2 from "../../images/image2.svg";
 import icons3 from "../../images/image3.svg";
@@ -114,7 +114,7 @@ const ScopeOfApplication = () => {
               </div>
               <div className={classes.widget_left}>
                 <img className={classes.img} src={icons3} alt="" />
-                <div className={classes.widgets_title_left}>
+                <div className={classes.widgets_title_left }>
                   <h2>Патруль местности</h2>
                   <p>
                     Способность гибкой модификации системы позволяет настроить
@@ -173,7 +173,7 @@ const ScopeOfApplication = () => {
                 <div className={classes.left_side}>
                   <div className={classes.icons_block}>
                     <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons3} alt="Icon 3" />
-                    <div className={classes.hover_content}>
+                    <div className={classes.hover_content_left}>
                       <div className={classes.icon_wrapper}>
                         <img className={classes.icon_img} src={icons3} alt="Icon 3" />
                         <h3>Патруль местности</h3>
@@ -188,7 +188,7 @@ const ScopeOfApplication = () => {
 
                   <div className={classes.icons_block}>
                     <img className={`${classes.icon_img} ${classes.initial_icon}`} src={icons5} alt="Icon 5" />
-                    <div className={classes.hover_content}>
+                    <div className={classes.hover_content_left}>
                       <div className={classes.icon_wrapper}>
                         <img className={classes.icon_img} src={icons5} alt="Icon 5" />
                         <h3>Разминирование</h3>
@@ -269,6 +269,7 @@ const ScopeOfApplication = () => {
                       перерыва на обед или исключить риски здоровью оператору при
                       ручном управлении в небезопасных местах
                     </p>
+
                   </div>
                 </div>
               </div>
