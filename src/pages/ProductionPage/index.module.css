@@ -9,7 +9,7 @@
 }
 
 .main_title_block {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 100px;
     margin-top: 120px;
 }
@@ -62,7 +62,7 @@
     position: absolute;
     z-index: 2;
     font-family: Nunito;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 50px;
     letter-spacing: -0.015em;
@@ -103,7 +103,8 @@
     padding: 30px;
     margin: 0;
     font-family: Nunito;
-    font-size: 40px;
+    font-size: 30px;
+
     font-weight: 700;
     line-height: 50px;
     letter-spacing: -0.015em;
@@ -142,7 +143,8 @@
     padding: 30px;
     margin: 0;
     font-family: Nunito;
-    font-size: 40px;
+    font-size: 30px;
+
     font-weight: 700;
     line-height: 50px;
     letter-spacing: -0.015em;
@@ -159,46 +161,40 @@
 
 /* Fourth block - below first and second */
 .pults {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     grid-column: 1 / 3;
     grid-row: 2;
     background: #FFFFFF;
     border-radius: 30px;
     padding: 0;
     min-height: 300px;
+    position: relative; /* Для позиционирования элементов */
     overflow: hidden;
-    box-shadow: 20px 20px 50px 10px #0446F11A;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
+    display: flex;
+    align-items: center; /* Выравниваем элементы по вертикали */
 }
-
-.pults:hover {
-    transform: translateZ(10px);
-    box-shadow: 0 4px 8px #6f95f2;
-}
-
 
 .pults h2 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
     font-family: Nunito;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
+    line-height: 50px;
     letter-spacing: -0.015em;
     color: #0446F1;
+    margin: 0;
 }
 
-.img_tel {
-    width: 316px;
+.pults img {
+    position: absolute;
+    right: 60px; /* Оставляем картинку на месте */
+    bottom: 90px; /* Подправь, если нужно */
+    max-width: 200px; /* Размер изображения */
     height: auto;
-    object-fit: cover;
-    display: block;
+    object-fit: contain;
 }
 
-.pults:hover {
-    transform: translateZ(10px);
-    box-shadow: 0 4px 8px #6f95f2;
-}
 
 /* Fifth block - full width at bottom */
 .complects {
@@ -219,9 +215,9 @@
 }
 
 .complects h2 {
-    padding: 42px 0 0 53px;
+    padding: 30px 0 0 30px;
     font-family: Nunito;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 50px;
     letter-spacing: -0.015em;
