@@ -8,7 +8,6 @@ import partners6 from '../../images/partner6.svg'
 import partners7 from '../../images/partners7.svg'
 import partners8 from '../../images/partners8.svg'
 import patriot from '../../images/patriot.svg'
-import Footer from "../../widgets/Footer/Footer";
 
 const Partners = () => {
 	return (

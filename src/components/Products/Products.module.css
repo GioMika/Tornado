@@ -9,6 +9,7 @@
     overflow: hidden;
     margin: 0 auto;
 }
+
 .link_reset {
     text-decoration: none;
     color: inherit;
@@ -35,7 +36,7 @@
 
 .main_title {
     width: calc(100% - 160px);
-    padding-left: 160px;
+    padding-left: 120px;
     margin-top: 120px;
     margin-bottom: 56px;
 }
@@ -61,8 +62,10 @@
 }
 
 
-li::marker {
-    font-size: 0.7em;
+li::before {
+    content: "•";
+    font-size: 1rem;
+    margin-right: 8px;
 }
 
 .btn {
@@ -98,10 +101,9 @@ li::marker {
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
-    width: 767px;
-    height: 474px;
+    width: 42.5%;
+    height: 287px;
     position: relative;
-
 }
 
 .block:hover {
@@ -110,57 +112,81 @@ li::marker {
     cursor: pointer;
 }
 
+.imageBlock {
+    display: flex;
+    align-self: end;
+}
+
 .robot {
     width: 100%;
-    max-width: 400px;
-    height: 524px;
-    margin-top: -45px;
+    height: auto;
+    max-height: 486px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.robot img {
+    width: 100%;
+    height: 486px;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .oko {
     width: 100%;
-    max-width: 499px;
-    height: 456px;
+    /*max-width: 499px;*/
+    height: 200px;
+    /*margin-top: -18px;*/
+
 }
 
 .topBlocks {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: calc(100% - 100px);
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
-    gap: 20px;
+    gap: 0 16px;
 }
 
 .textBlock {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     max-width: 100%;
     line-height: 36px;
     flex-wrap: wrap;
     width: 100%;
     padding-left: 20px;
     margin: 0 auto;
+    margin: 46px;
 }
 
 
 .fullWidthBlock {
-    width: calc(100% - 100px);
+    width: 86.5%;
     margin: 0 auto;
-    height: 456px;
+    height: 368px;
     background: #FAFAFA;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    align-items: end;
     box-sizing: border-box;
     box-shadow: 20px 20px 50px 10px #0446F11A;
     border-radius: 30px;
-    margin-top: 60px;
+    margin-top: 20px;
     transition: transform 0.3s ease,
     box-shadow 0.3s ease;
     transform-style: preserve-3d;
+    /*justify-content: space-evenly;*/
+}
+
+.fullWidthBlock img {
+    display: flex;
+    height: 42.5vh;
+    margin-left: 100px;
+    /*justify-self: end;*/
+
 }
 
 .fullWidthBlock:hover {
@@ -171,12 +197,11 @@ li::marker {
 
 .title_tornado {
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 36px;
     letter-spacing: -0.015em;
     color: #000000;
-    margin-top: -100px;
     display: flex;
 }
 
@@ -188,7 +213,6 @@ li::marker {
     line-height: 36px;
     letter-spacing: -0.015em;
     color: #000000;
-    margin-top: -100px;
     display: flex;
 }
 
@@ -208,22 +232,66 @@ li::marker {
 
 
 .textBlock span {
-    width: 14vw;
+    width: 16vw;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 22px;
     letter-spacing: -0.015em;
     color: #000000CC;
+    margin-top: 10px;
 }
 
-.para_robot {
-    width: 14vw;
+.textBlock h2 {
+    width: 100%;
     font-size: 18px;
+    line-height: 18px;
+}
+
+.fullWidthBlock > .textBlock {
+    padding-left: 200px;
+}
+
+.first_text p {
+    width: 90%;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+
+}
+
+.text h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.text li {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    justify-items: start;
+
+}
+
+.text li:nth-child(3) {
+    display: flex;
+    padding: 0 2px;
+    gap: 3px;
+}
+
+li::marker {
+    content: "";
+}
+
+
+.para_robot {
+    width: 13vw;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 22px;
     letter-spacing: -0.015em;
     color: #000000CC;
+    margin-top: 10px;
 }
 
 .robot_2 {
@@ -231,10 +299,150 @@ li::marker {
 }
 
 
+@media (max-width: 1024px) {
+    .block_btn {
+        display: none;
+    }
+
+    .main_title p {
+        font-size: 16px;
+
+    }
+
+    .main_title h2 {
+        font-size: 36px;
+    }
+
+    .para_robot {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        color: #000000CC;
+    }
+
+    .robot {
+        margin-left: 10px;
+    }
+
+    .textBlock {
+        margin-left: 20px;
+        padding-left: 10px;
+    }
+
+    .textBlock span {
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.015em;
+        color: #000000CC;
+    }
+
+
+    .title_tornado_oko {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .btns {
+        display: none;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .title_tornado, title_tornado_oko {
+        display: none;
+    }
+
+
+    .title_tornado2 {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        display: flex;
+    }
+
+    .title_tornado_oko2 {
+        display: flex;
+        flex-direction: column;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        padding-top: 30px;
+        margin-bottom: -10px;
+    }
+
+    .topBlocks {
+        display: flex;
+        width: 100%;
+    }
+
+    .fullWidthBlock {
+        display: flex;
+        height: 200px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .robot {
+        width: 100%;
+        height: 200px;
+    }
+
+    .oko {
+        margin: 0 auto;
+        width: 100%;
+        height: 200px;
+        padding-left: 20px;
+        margin-left: -15px;
+    }
+
+
+    .block {
+        width: 90%;
+        margin-bottom: 20px;
+        height: 200px;
+        flex-direction: row-reverse;
+    }
+
+    .textBlock {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .textBlock p {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: -0.015em;
+        line-height: 18px;
+    }
+
+    .first_text {
+        width: 60vw;
+    }
+}
+
+
 @media (max-width: 768px) {
     .block_btn {
         display: none;
     }
+
     .main_title p {
         font-family: Montserrat;
         font-size: 14px;
@@ -341,142 +549,7 @@ li::marker {
     }
 }
 
-@media (max-width: 1024px) {
-    .block_btn {
-        display: none;
-    }
-    .main_title p {
-        font-size: 16px;
 
-    }
-
-    .main_title h2 {
-        font-size: 36px;
-    }
-
-    .para_robot {
-        width: 100%;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: -0.015em;
-        color: #000000CC;
-    }
-
-    .robot {
-        margin-left: 10px;
-    }
-
-    .textBlock {
-        margin-left: 20px;
-        padding-left: 10px;
-    }
-
-    .textBlock span {
-        width: 100%;
-        font-family: Montserrat;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: -0.015em;
-        color: #000000CC;
-    }
-
-
-    .title_tornado_oko {
-        display: none;
-    }
-
-    .btn {
-        display: none;
-    }
-
-    .btns {
-        display: none;
-    }
-
-    .text {
-        display: none;
-    }
-
-    .title_tornado, title_tornado_oko {
-        display: none;
-    }
-
-
-    .title_tornado2 {
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        display: flex;
-    }
-
-    .title_tornado_oko2 {
-        display: flex;
-        flex-direction: column;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-        padding-top: 30px;
-        margin-bottom: -10px;
-    }
-
-    .topBlocks {
-        display: flex;
-        width: 100%;
-    }
-
-    .fullWidthBlock {
-        display: flex;
-        height: 200px;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .robot {
-        width: 100%;
-        height: 200px;
-    }
-
-    .oko {
-        margin: 0 auto;
-        width: 100%;
-        height: 200px;
-        padding-left: 20px;
-        margin-left: -15px;
-    }
-
-
-    .block {
-        width: 100%;
-        margin-bottom: 20px;
-        height: 200px;
-        flex-direction: row-reverse;
-    }
-
-    .textBlock {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding-left: 10px;
-        margin-bottom: 20px;
-    }
-
-    .textBlock p {
-        font-family: Montserrat;
-        font-size: 16px;
-        font-weight: 400;
-        text-align: left;
-        letter-spacing: -0.015em;
-        line-height: 18px;
-    }
-
-    .first_text {
-        width: 60vw;
-    }
-}
 
 @media (min-width: 1921px) {
     .button {
