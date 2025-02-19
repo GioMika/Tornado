@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import robot_2 from '../../images/Mask group (1).svg';
-import barbel from '../../images/dumpbll.png';
-import remote from '../../images/remote.png';
-import uneven2 from '../../images/sign.png';
-import worktime from '../../images/time.png';
-import resize from '../../images/arrow.png';
-import speedometer from '../../images/speedometer.svg';
+import barbel from '../../images/descr_icons/barbel.png';
+import remote from '../../images/descr_icons/remote.png';
+import uneven2 from '../../images/descr_icons/uneven.png';
+import worktime from '../../images/descr_icons/work-time.png';
+import resize from '../../images/descr_icons/resize.png';
+import speedometer from '../../images/descr_icons/speedometer.png';
 import './RobotDescription.css';
 
 export default function RobotDescription() {
