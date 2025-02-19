@@ -8,15 +8,7 @@ import waterProof from "../../images/water-proof.svg";
 import shield from "../../images/shield.svg";
 import chassis from "../../images/chassis.svg";
 import adaptive from "../../images/adaptive.svg";
-import robot_2 from "../../images/robot_2.svg";
-import barbel from "../../images/barbel.svg";
-import remote from "../../images/remote.png";
-import uneven2 from "../../images/uneven _2.svg";
-import worktime from "../../images/work-time.svg";
-import resize from "../../images/resize.svg";
-import speedometer from "../../images/speedometer.svg";
 import oko from "../../images/ok.svg";
-import backgroundForms from "../../images/BackgroundForm.png";
 import ContactsPage from "../ContactsPage/ContactsPage";
 import RobotDescription from "../../components/RobotDesciption/RobotDescription";
 
@@ -130,10 +122,11 @@ const TornadoPage = () => {
         </section>
 
         <div className={classes.tech_block}>
+          <div className={classes.tech_block_title}>
           <div className={classes.peculiarities_title}>
             <h2>Технические характеристики</h2>
             <p>Параметры робота</p>
-          </div>
+          </div></div>
           <RobotDescription />
         </div>
 
@@ -168,16 +161,20 @@ const TornadoPage = () => {
               <img src={oko} alt="" />
             </div>
 
-            <div className={classes.block_galery}>
-              <div className={classes.galery_title}>
-                <h2>Галерея</h2>
-                <p>Посмотрите на роботов в работе</p>
-              </div>
-            </div>
+         
           </div>
         </section>
+        <section className={classes.gallery_block}>
+  <div className={classes.peculiarities_title}>
+    <h2>Галерея</h2>
+    <p>Посмотрите на роботов в работе</p>
+  </div>
+</section>
       </main>
-      <ContactsPage/>
+      <section className={classes.contacts_page}>
+  <ContactsPage />
+</section>
+
     </>
   );
 };
