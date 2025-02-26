@@ -35,13 +35,16 @@ const Services = () => {
 						 </div>
 						 <img className={classes.img_leasing} src={leasing} alt=""/>
 					 </div>
+
+
 					 <div onClick={() => handelNavigate('/equipping')} className={classes.block_improvement}>
 						 <div className={classes.title_improvement}>
 							 <h2>Дооснащение техники оборудованием клиента</h2>
-
 						 </div>
 						 <img className={classes.img_improvement} src={improvement} alt=""/>
 					 </div>
+
+
 					 <div onClick={() => handelNavigate('/rent')} className={classes.block_rent}>
 						 <img className={classes.img_rent} src={rent} alt=""/>
 						 <div className={classes.title_rent}>

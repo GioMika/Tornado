@@ -25,11 +25,11 @@ const Products = () => {
 					 <div onClick={() => handelNavigate('/tornado')} className={classes.block}>
 						 <div className={classes.textBlock}>
 							 <h2 className={classes.title_tornado}>Торнадо (колесно-шагающий)</h2>
-							 <h2 className={classes.title_tornado2}>Торнадо</h2>
 							 <div className={classes.paragraph}>
+								 <h2 className={classes.title_tornado2}>Торнадо</h2>
 								 <span>Колесно-шагающий мобильный робот малого класса с грузоподъемностью до 25кг.</span>
 							 </div>
-								 <Button className={classes.btns}>Подробнее</Button>
+							 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -41,11 +41,11 @@ const Products = () => {
 					 <div onClick={() => handelNavigate('/typhoon')} className={classes.block}>
 						 <div className={classes.textBlock}>
 							 <h2 className={classes.title_tornado}>Тайфун (колесно-шагающий)</h2>
-							 <h2 className={classes.title_tornado2}>Тайфун</h2>
 							 <div className={classes.para_robot}>
+								 <h2 className={classes.title_tornado2}>Тайфун</h2>
 								 <span>Колесно-шагающий мобильный робот среднего класса с грузоподъемностью до 115кг.</span>
 							 </div>
-								 <Button className={classes.btns}>Подробнее</Button>
+							 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 						 <div className={classes.imageBlock}>
 							 <img className={classes.robot} src={robot} alt="Placeholder"/>
@@ -54,14 +54,16 @@ const Products = () => {
 					 </div>
 				 </div>
 
+
+
 				 <div onClick={() => handelNavigate('/oko')} className={classes.fullWidthBlock}>
 					 <div className={classes.imageBlock}>
 						 <img className={classes.oko} src={oko} alt="Placeholder"/>
 					 </div>
 					 <div className={classes.textBlock}>
 						 <h2 className={classes.title_tornado_oko}>Око (Видеонаблюдение)</h2>
-						 <h2 className={classes.title_tornado_oko2}>Око</h2>
 						 <div className={classes.first_text}>
+							 <h2 className={classes.title_tornado_oko2}>Око</h2>
 							 <p>Универсальная поворотная телекамера «Око» позволяет вести
 								 круглосуточное наблюдение в самых суровых условиях окружающей среды.</p>
 						 </div>
@@ -74,6 +76,9 @@ const Products = () => {
 						 </div>
 					 </div>
 				 </div>
+
+
+
 				 <div className={classes.block_btn}>
 					 <Button className={classes.button}>Подробнее</Button>
 				 </div>
