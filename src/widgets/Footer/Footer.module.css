@@ -1,10 +1,14 @@
+/* Базовые стили */
+
 .footer {
     width: 100%;
     background: #000000;
-    height: 100%;
+    /* Убрали фиксированную высоту, чтобы футер тянулся по контенту */
+    /* height: 100%; */
     padding-bottom: 20px;
-    overflow: hidden;
+    overflow: hidden; /* Если нужно обрезать все, что вылезает за границы */
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .footer_mobile {
@@ -13,23 +17,27 @@
 
 .link {
     padding-bottom: 120px;
-
 }
 
 .main {
-    width: 100vw;
+    width: 100%;
     padding-top: 160px;
     display: grid;
+    /* Гибкое число колонок: от 150px до 1fr */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
-    grid-gap: 20px;
+    grid-gap: 10px;
+    margin: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .logoMobile {
     display: none;
 }
 
-.main p, Link {
+.main p,
+Link {
     display: inline-block;
     position: relative;
     color: #FFFFFF;
@@ -74,17 +82,13 @@
     flex-direction: column;
 }
 
-
-
-
 .paragraph_block p {
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
     color: #FFFFFF;
-    /*margin-bottom: 10px;*/
-    padding-top: -10px;
+    padding-top: -10px; /* Если нужно визуально поднять текст, можно использовать margin-top: -... */
 }
 
 .paragraph_block p:last-child {
@@ -133,17 +137,13 @@
     margin-bottom: -2px;
 }
 
-.products a:nth-child(1){
+.products a:nth-child(1) {
     margin-top: -14px;
-
 }
-.products_block p:nth-child(2){
+
+.products_block p:nth-child(2) {
     margin-top: 17px;
-
 }
-
-
-
 
 .subtitle {
     font-family: Montserrat;
@@ -164,11 +164,9 @@
     margin-top: 120px;
 }
 
-
 .footer_block {
     display: flex;
     flex-direction: column;
-    /*gap: 17px;*/
     margin: 0 auto;
     padding-top: 40px;
 }
@@ -185,8 +183,56 @@
     padding-left: 0;
 }
 
-.products div:nth-child(2){
 
+@media (max-width: 1024px) {
+
+
+    .main {
+        padding-top: 120px;
+        margin: 10px auto;
+        grid-gap: 10px;
+    }
+
+    .logo {
+        width: 130px;
+        height: auto;
+    }
+
+    .main p,
+    Link {
+        font-size: 14px;
+    }
+
+    .link {
+        padding-bottom: 80px;
+    }
+
+
+    .line {
+        width: 90vw;
+        margin-top: 80px;
+    }
+
+
+    .footer {
+        padding-bottom: 10px;
+    }
+
+
+    .span_block {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .span {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF4D;
+        border-radius: 50%;
+    }
 }
 
 @media (max-width: 724px) {
