@@ -55,7 +55,6 @@ const Products = () => {
 				 </div>
 
 
-
 				 <div onClick={() => handelNavigate('/oko')} className={classes.fullWidthBlock}>
 					 <div className={classes.imageBlock}>
 						 <img className={classes.oko} src={oko} alt="Placeholder"/>
@@ -67,20 +66,20 @@ const Products = () => {
 							 <p>Универсальная поворотная телекамера «Око» позволяет вести
 								 круглосуточное наблюдение в самых суровых условиях окружающей среды.</p>
 						 </div>
+
 						 <div className={classes.text}>
 							 <h3>Варианты поставки</h3>
 							 <li> В составе наших робототехнических комплексов</li>
 							 <li>Выносная система видеонаблюдения</li>
 							 <li> Отдельное устройство для комплектации оборудования заказчика</li>
-								 <Button className={classes.btns}>Подробнее</Button>
+							 <Button className={classes.btns}>Подробнее</Button>
 						 </div>
 					 </div>
 				 </div>
 
 
-
 				 <div className={classes.block_btn}>
-					 <Button className={classes.button}>Подробнее</Button>
+					 <Button className={classes.button}>Все модели</Button>
 				 </div>
 			 </div>
 			 <Services/>

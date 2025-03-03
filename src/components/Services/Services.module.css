@@ -1,7 +1,8 @@
 .main_section {
     width: 100%;
     height: auto;
-    overflow: hidden;
+    padding-bottom: 50px;
+    /*overflow: hidden;*/
 }
 
 .blocks {
@@ -147,9 +148,9 @@
 }
 
 .block_improvement {
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     width: 100%;
-    min-width: 370px;
+    /*min-width: 300px;*/
     height: auto;
     display: flex;
     align-items: center;
@@ -233,14 +234,11 @@
 
 @media (max-width: 1024px) {
     .main_section {
-        width: 100%;
+        width: 100vw;
         overflow: hidden;
         margin-bottom: 50px;
     }
 
-    .main_title_block {
-        margin-left: 8%;
-    }
 
     .main_title_block h2 {
         font-family: Montserrat;
@@ -248,7 +246,6 @@
         font-weight: 700;
         line-height: 30px;
         letter-spacing: -0.015em;
-
     }
 
     .main_title_block p {
@@ -267,8 +264,9 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(4, auto);
         grid-gap: 13px;
-        margin: 10px;
-        /*padding: 0 3.5rem 0 3.5%;*/
+        /*margin: 10px;*/
+        margin: 0 -1rem 0;
+        padding: 0 4% 0 8%;
     }
 
     .title_updating h2 {
@@ -351,7 +349,6 @@
 
     .title_improvement {
         width: 27vw;
-        /*align-items: end;*/
     }
 
 
@@ -389,24 +386,31 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 724px) {
     .main_section {
         width: 100%;
         height: auto;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        margin-top: -60px;
     }
 
 
     .blocks {
         width: 100%;
+        justify-content: center;
+        align-items: center;
         height: auto;
         display: grid;
         grid-auto-rows: minmax(151px, auto);
         /*gap: 15px;*/
-        padding: 0 10px;
         margin: 0 auto;
-        /*justify-content: center;*/
-        margin-bottom: 50px;
+        padding: 0 2% 0 2%;
+        margin-top: -34px;
     }
 
     .main_title_block h2 {
@@ -443,6 +447,7 @@
 
 
     .blocks > div:nth-child(1).block_updating {
+
         grid-column: 1 / 5;
         grid-row: 1;
         width: 100%;
@@ -450,6 +455,8 @@
         min-height: 151px;
         display: flex;
         align-items: center;
+        margin: 0 auto;
+        justify-content: center;
     }
 
     .blocks > div:nth-child(2).block_leasing {
@@ -466,7 +473,7 @@
         font-weight: 700;
         line-height: 17px;
         letter-spacing: -0.02em;
-        margin-left: 70px;
+        margin-left: 40px;
     }
 
 
@@ -474,7 +481,7 @@
         width: 156px;
         height: 156px;
         margin-top: -13px;
-        margin-right: 40px;
+        margin-right: 20px;
 
     }
 
@@ -503,6 +510,7 @@
 
 
     .blocks > div:nth-child(3).block_improvement {
+        width: 100%;
         grid-column: 1 / -1;
         grid-row: 4;
         height: 151px;
@@ -521,9 +529,7 @@
         font-weight: 700;
         line-height: 17px;
         letter-spacing: -0.02em;
-        margin-left: 20px;
-        margin-top: -20px;
-        /*width: 100%;*/
+        /*margin-top: -20px;*/
     }
 
     .block_improvement .img_improvement {
@@ -534,62 +540,3 @@
 }
 
 
-
-
-@media (min-width: 1921px) {
-
-    .blocks {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 700px 700px;
-        grid-gap: 36px 50px;
-        margin: 30px;
-    }
-
-    .img_updating {
-        width: 100%;
-        max-width: 650px;
-        height: 592px;
-        justify-self: end;
-        margin-top: 108px;
-        margin-right: 51px;
-    }
-
-    .img_leasing {
-        width: 100%;
-        max-width: 450px;
-        height: 592px;
-        justify-self: end;
-    }
-
-    .title_updating h2 {
-        font-size: 46px;
-        padding-left: 20px;
-        padding-top: 50px;
-    }
-
-    .title_leasing h2 {
-        font-size: 46px;
-    }
-
-    .title_rent h2 {
-        font-size: 46px;
-    }
-
-    .title_improvement h2 {
-        font-size: 46px;
-        padding-left: 20px;
-        padding-top: 50px;
-    }
-
-    .img_rent {
-        width: 500px;
-    }
-
-    .img_improvement {
-        width: 500px;
-        height: 402px;
-    }
-
-
-}

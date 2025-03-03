@@ -11,9 +11,9 @@ const Footer = () => {
 					 <img className={classes.logo} src={logo} alt=""/>
 					 <img className={classes.logoMobile} src={logoMobile} alt=""/>
 					 <div className={classes.paragraph_block}>
-						 <p>Адрес: ул. рроаып</p>
-						 <p> Телефон</p>
-						 <p>Почта</p>
+						 <h5>Адрес: ул. рроаып</h5>
+						 <h5> Телефон</h5>
+						 <h5>Почта</h5>
 						 <div className={classes.span_block}>
 							 <span className={classes.span}></span>
 							 <span className={classes.span}></span>

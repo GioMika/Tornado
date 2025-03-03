@@ -9,8 +9,6 @@ const Main = () => {
 			<main>
 
 				<div className={classes.main}>
-
-
 					<video
 						 autoPlay
 						 loop
@@ -20,7 +18,6 @@ const Main = () => {
 						 className={classes.backgroundVideo}
 					>
 						<source src="/VID_20241028_145756_086.mp4" type="video/mp4"/>
-
 					</video>
 					<div className={classes.main__content}>
 						<h1 className={classes.title}>
@@ -36,7 +33,6 @@ const Main = () => {
 					</div>
 				</div>
 			</main>
-
 			<ScopeOfApplication/>
 		</>
 	);

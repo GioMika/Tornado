@@ -9,24 +9,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 }
 
 .main_title_block {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 120px;
+    margin-bottom: 20px;
     padding-left: 8%;
 }
 
 .main_title_block h2 {
     color: #0446F1;
-    font-size:48px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     margin-bottom: 1rem;
-    margin-top: 120px;
-    margin-left: 170px;
     text-align: start;
 }
 
@@ -35,8 +34,6 @@
     font-weight: 700;
     color: black;
     text-align: start;
-    margin-left: 170px;
-
 }
 
 .main_block {
@@ -58,9 +55,8 @@
 
 .top_row {
     display: flex;
-    gap: clamp(4rem, 21vw, 6rem);
-    padding-top: 150px;
-    /*margin-bottom: 34px;*/
+    gap: clamp(4rem, 21vw, 5.7rem);
+    /*padding-top: 150px;*/
 }
 
 .middle_section {
@@ -71,6 +67,7 @@
     padding: 3rem;
     position: relative;
 }
+
 .left_side,
 .right_side {
     display: flex;
@@ -79,7 +76,6 @@
     width: 300px;
     margin-top: 8px;
 }
-
 
 
 .right_side {
@@ -130,9 +126,9 @@
 }
 
 .icon_img {
-    width: clamp(40px, 6vw, 80px);
+    width: clamp(30px, 6vw, 80px);
     height: clamp(40px, 6vw, 80px);
-    transition: all 0.3s ease-in-out;
+    transition: all 2.3s ease-in-out;
 }
 
 .initial_icon {
@@ -140,7 +136,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 
@@ -173,21 +169,84 @@
 .top_row .icons_block:first-child .hover_content,
 .bottom_row .icons_block:first-child .hover_content,
 .left_side .icons_block .hover_content_left {
-    right: -72%;
+    right: -66%;
     top: 34%;
     transform: translate(-2.2rem, -32%);
 }
+
 
 .icons_block:hover .hover_content,
 .icons_block:hover .hover_content_left {
     opacity: 11;
     visibility: visible;
     pointer-events: auto;
+    box-shadow: 1px 10px 30px 5px #0446F159;
+
+
 }
+
+
+.icons_block:hover .hover_content_left {
+    transform: translate(0.8rem, -31%);
+}
+
+.icons_block:hover .hover_content {
+    transform: translate(-3.0rem, -52%);
+}
+
+.bottom_row div:nth-child(1) .hover_content {
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.bottom_row div:nth-child(1):hover .hover_content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-3.0rem, -36%);
+}
+
+.bottom_row div:nth-child(2) .hover_content {
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.bottom_row div:nth-child(2):hover .hover_content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0.8rem, -55%);
+}
+
+
+.top_row div:nth-child(2) .hover_content {
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.top_row div:nth-child(2):hover .hover_content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0.8rem, -46%);
+    /*height: 25vh;*/
+    padding-bottom: 20px;
+}
+
+
+.top_row div:nth-child(1) .hover_content {
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.top_row div:nth-child(1):hover .hover_content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-3.0rem, -28%);
+}
+
 
 .icons_block:hover .initial_icon {
     opacity: 0;
     visibility: hidden;
+    transform: translate(0.8rem);
 }
 
 .hover_content h3,
@@ -210,7 +269,7 @@
 .bottom_row {
     display: flex;
     justify-content: center;
-    gap: clamp(4rem, 21vw, 5.2rem);
+    gap: clamp(4rem, 21vw, 5.7rem);
     margin-top: -18px;
 }
 
@@ -254,6 +313,7 @@
     box-shadow: 0 4px 4px rgba(4, 70, 241, 0.1);
 }
 
+
 .widget_right {
     flex-direction: row-reverse;
 }
@@ -277,21 +337,20 @@
 }
 
 .duble_images {
-    max-width: 400px; 
-    width: 100%;      
-    height: auto;     
+    max-width: 400px;
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center; 
-    align-items: center;    
-    margin: 0 auto;          
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .duble_images img {
-    width: 100%;      
-    height: auto;    
-    object-fit: contain; 
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
-
 
 
 @media screen and (max-width: 1024px) {
@@ -315,14 +374,23 @@
         margin-bottom: 30px;
     }
 
+    .main_title_block h2 {
+        font-size: 36px;
+    }
+
+    .main_title_block p {
+        font-size: 24px;
+        font-family: Montserrat;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
     .block_widgets {
         display: flex;
         flex-direction: column;
         gap: 20px;
         width: 100%;
         max-width: 100%;
-        /*background: #6f95f2;*/
-        /*box-shadow: 0 4px 8px #6f95f2;*/
     }
 
 
@@ -334,7 +402,6 @@
         padding: 20px;
         background: #FFFFFF;
         border-radius: 25px;
-        /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
         transition: transform 0.3s ease;
         width: 100%;
         min-height: 150px;
@@ -414,13 +481,7 @@
 @media screen and (max-width: 724px) {
     .mobileContainer {
         padding: 0 10px;
-        /*height: 100vh;*/
-    }
-
-    .block_widgets {
-
-        /*padding: 0 10px;*/
-        /*margin-top: 50px;*/
+        margin-bottom: -50px;
     }
 
 
@@ -469,20 +530,26 @@
     }
 
     .main_title_block {
-        /*margin-right: -40px;*/
-        margin-bottom: 12px;
+        margin-bottom: 30px;
+        row-gap: -20px;
+        margin-top: -50px;
+        margin-left: -20px;
     }
 
     .main_title_block h2 {
-        font-size: 22px;
-        margin-bottom: -2px;
-        padding-right: 20px;
-
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 100px;
     }
 
     .main_title_block p {
-        font-size: 16px;
-        margin-bottom: 20px;
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: -18px;
     }
 }
 
@@ -494,11 +561,11 @@
     }
 
     .main_title_block h2 {
-        font-size: clamp(3rem, 5vw, 4.5rem);
+        font-size: 56px;
     }
 
     .main_title_block p {
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-size: 28px;
     }
 
     .top_row {
@@ -569,5 +636,21 @@
     .bottom_row .icons_block:first-child .hover_content,
     .left_side .icons_block .hover_content_left {
         right: -30%;
+    }
+
+    .hover_content,
+    .hover_content_left {
+        position: absolute;
+        width: 30vw;
+        min-height: 220px;
+        padding: 10px 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        z-index: 100;
+        background: #ffffff;
+        border-radius: 25px;
+        pointer-events: none;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     }
 }

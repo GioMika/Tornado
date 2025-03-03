@@ -171,9 +171,9 @@ const OkoPage = () => {
     <p>Посмотрите на роботов в работе</p>
   </div>
 </section>
-	  <section className={classes.contacts_page}>
-  <ContactsPage />
-</section>
+{/*	  <section className={classes.contacts_page}>*/}
+{/*  <ContactsPage />*/}
+{/*</section>*/}
     </main>
 
   );

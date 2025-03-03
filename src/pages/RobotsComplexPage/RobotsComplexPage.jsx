@@ -16,11 +16,12 @@ const RobotsComplexPage = () => {
 				 <h2 className={classes.h2}>Роботизированные <br/> комплексы</h2>
 			 </div>
 			 <div className={classes.topBlocks}>
+
 				 <div onClick={() => handelNavigate('/tornado')} className={classes.block}>
 					 <div className={classes.textBlock}>
 						 <h2 className={classes.title_tornado}>Торнадо (колесно-шагающий)</h2>
-						 <h2 className={classes.title_tornado2}>Торнадо</h2>
 						 <div className={classes.paragraph}>
+							 <h2 className={classes.title_tornado2}>Торнадо</h2>
 							 <span>Колесно-шагающий мобильный робот малого класса с грузоподъемностью до 25кг.</span>
 						 </div>
 						 <Button className={classes.btns}>Подробнее</Button>
@@ -30,11 +31,13 @@ const RobotsComplexPage = () => {
 						 <img className={classes.robot_2} src={robot_2} alt="Placeholder"/>
 					 </div>
 				 </div>
+
+
 				 <div onClick={() => handelNavigate('/typhoon')} className={classes.block}>
 					 <div className={classes.textBlock}>
 						 <h2 className={classes.title_tornado}>Тайфун (колесно-шагающий)</h2>
-						 <h2 className={classes.title_tornado2}>Тайфун</h2>
 						 <div className={classes.para_robot}>
+							 <h2 className={classes.title_tornado2}>Тайфун</h2>
 							 <span>Колесно-шагающий мобильный робот среднего класса с грузоподъемностью до 115кг.</span>
 						 </div>
 						 <Button className={classes.btns}>Подробнее</Button>

@@ -1,14 +1,24 @@
+
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 10px;
     box-sizing: border-box;
+    margin-top: 120px;
     background: #FAFAFA;
+    margin: 0 auto;
+    padding: 0 4% 0 8%;
     overflow: hidden;
     background-image: url("../../images/zero.png");
     background-repeat: no-repeat;
     background-position: right top;
+    padding-bottom: 100px;
+}
+
+.link_reset {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .block_btn {
@@ -30,8 +40,7 @@
 }
 
 .main_title {
-    width: calc(100% - 160px);
-    padding-left: 160px;
+    margin-top: 120px;
     margin-bottom: 56px;
 }
 
@@ -39,11 +48,11 @@
     font-family: Montserrat;
     font-size: 48px;
     font-weight: 400;
-    line-height: 72px;
+    line-height: 52px;
     letter-spacing: -0.015em;
     text-align: left;
     color: #0446F1;
-    margin-top: 50px;
+
 }
 
 .main_title p {
@@ -56,8 +65,10 @@
 }
 
 
-li::marker {
-    font-size: 0.2em;
+li::before {
+    content: "•";
+    font-size: 1rem;
+    margin-right: 8px;
 }
 
 .btn {
@@ -79,6 +90,7 @@ li::marker {
     border: 1px solid #0446F1;
     margin-top: 15px;
     color: #0446F1;
+    cursor: pointer;
 }
 
 
@@ -92,9 +104,10 @@ li::marker {
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
-    width: 767px;
-    height: 474px;
+    width: 100%;
+    height: 270px;
     position: relative;
+    padding: 10px 0 14px 0;
 }
 
 .block:hover {
@@ -103,73 +116,93 @@ li::marker {
     cursor: pointer;
 }
 
+.imageBlock {
+    display: flex;
+    align-self: end;
+}
+
 .robot {
     width: 100%;
-    max-width: 400px;
-    height: 524px;
-    margin-top: -45px;
+    height: auto;
 }
+
 
 .oko {
     width: 100%;
-    max-width: 499px;
-    height: 456px;
+    height: 210px;
 }
 
 .topBlocks {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: calc(100% - 100px);
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
-    gap: 20px;
-    margin-top: 100px;
+    gap: 0 16px;
 }
 
-.textBlock {
+.block .textBlock {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    max-width: 100%;
+    line-height: 36px;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+.fullWidthBlock .textBlock {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     line-height: 36px;
     flex-wrap: wrap;
     width: 100%;
     padding-left: 20px;
     margin: 0 auto;
+    padding-bottom: 20px;
+    /*margin: 46px;*/
 }
 
 
 .fullWidthBlock {
-    width: calc(100% - 100px);
+    width: 100%;
     margin: 0 auto;
-    height: 456px;
+    height: 318px;
     background: #FAFAFA;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    align-items: end;
     box-sizing: border-box;
     box-shadow: 20px 20px 50px 10px #0446F11A;
     border-radius: 30px;
-    margin-top: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
     transform-style: preserve-3d;
-    margin-bottom: 50px;
+    /*margin-top: 6%;*/
+    position: relative;
+}
+
+.fullWidthBlock img {
+    display: flex;
+    height: 350px;
+    margin-left: 100px;
 }
 
 .fullWidthBlock:hover {
     transform: translateZ(10px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
 .title_tornado {
+    width: 100%;
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 36px;
     letter-spacing: -0.015em;
     color: #000000;
-    margin-top: -100px;
     display: flex;
 }
 
@@ -181,7 +214,6 @@ li::marker {
     line-height: 36px;
     letter-spacing: -0.015em;
     color: #000000;
-    margin-top: -100px;
     display: flex;
 }
 
@@ -201,22 +233,66 @@ li::marker {
 
 
 .textBlock span {
-    width: 14vw;
+    width: 16vw;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 20px;
     letter-spacing: -0.015em;
     color: #000000CC;
+    margin-top: 10px;
 }
 
-.para_robot {
-    width: 14vw;
+.textBlock h2 {
+    width: 100%;
     font-size: 18px;
+    line-height: 18px;
+}
+
+.fullWidthBlock > .textBlock {
+    padding-left: 100px;
+}
+
+.first_text p {
+    width: 90%;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+
+}
+
+.text h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.text li {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    justify-items: start;
+
+}
+
+.text li:nth-child(3) {
+    display: flex;
+    padding: 0 2px;
+    gap: 3px;
+}
+
+li::marker {
+    content: "";
+}
+
+
+.para_robot {
+    width: 13vw;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 18px;
     letter-spacing: -0.015em;
     color: #000000CC;
+    margin-top: 10px;
 }
 
 .robot_2 {
@@ -224,163 +300,61 @@ li::marker {
 }
 
 
-.text {
-    margin: 0 auto;
-    line-height: 30px;
-}
-
-.text p {
-    left: 20px;
-}
-
-.textBlock {
-    margin-top: 50px;
-}
-
-.textBlock h2 {
-    margin-bottom: 20px;
-}
+@media (max-width: 1024px) {
 
 
-@media (max-width: 724px) {
-    .block_btn {
-        display: none;
-    }
-
-    .main_title{
+    .fullWidthBlock {
         display: flex;
+        width: 100%;
         justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .h2 {
-        font-size: 20px;
-    }
-
-    .title_tornado_oko {
-        display: none;
-    }
-
-    .container {
-        overflow-x: hidden;
-    }
-
-    .topBlocks {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .robot {
-        display: none;
-    }
-
-    .robot_2 {
-        display: flex;
-        width: 100%;
-        height: 232px;
-        margin: 0 auto;
-        margin-left: 12px;
+        align-items: center;
+        height: auto;
+        padding: 10px 0 0 0;
         margin-top: -10px;
     }
 
-    .block {
-        width: 100%;
-        margin-bottom: 10px;
-        height: 151px;
-        flex-direction: row-reverse;
-    }
 
-    .textBlock {
-        padding: 10px;
-    }
+    .fullWidthBlock .textBlock {
+        height: auto;
 
-    .textBlock p {
-        font-family: Montserrat;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-        letter-spacing: -0.015em;
-        /*color: #000000CC;*/
-        margin-bottom: 20px;
-        /*margin-left: 10px;*/
-    }
-
-    .title_tornado2 {
-        width: 100%;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 15px;
-        letter-spacing: -0.02em;
-    }
-
-    .imageBlock {
-        display: flex;
-        gap: 20px;
-    }
-
-    .robot {
-        margin-top: 20px;
-    }
-
-    .imageBlock .oko {
-        width: 70px;
     }
 
     .text {
-        margin: 10px;
-        padding-top: 10px;
-    }
-
-    .text li {
-        line-height: 8px;
+        line-height: 20px;
     }
 
     .text h3 {
-        margin-top: -9px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .main_title h2 {
-        font-family: Montserrat;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: -0.015em;
-        color: #0446F1;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .text li {
-        width: 100%;
-        font-family: Montserrat;
-        font-size: 22px;
-        font-weight: 400;
-        color: #000000CC;
-    }
-
-    .text p {
-        margin-bottom: 10px;
-    }
-
-
-    .text h3 {
-        margin-bottom: 20px;
-    }
-
-
-    .block_btn {
-        display: none;
-    }
-
-    .main_title p {
         font-size: 16px;
+    }
+
+    .text li {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 10px;
+        justify-items: start;
 
     }
 
+    .text li:nth-child(3) {
+        display: flex;
+        padding: 0 2px;
+        gap: 3px;
+    }
+
+    li::marker {
+        content: "";
+    }
+
+
+    .container {
+        width: 100%;
+    }
+
+
+    .main_title h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
 
     .para_robot {
         width: 100%;
@@ -389,15 +363,23 @@ li::marker {
         line-height: 20px;
         letter-spacing: -0.015em;
         color: #000000CC;
+        padding-right: 24px;
+
+    }
+
+    .paragraph {
+        padding-right: 24px;
     }
 
     .robot {
-        margin-left: 10px;
+        margin-left: 4px;
     }
 
     .textBlock {
-        margin-left: 20px;
-        padding-left: 10px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .textBlock span {
@@ -410,23 +392,21 @@ li::marker {
         color: #000000CC;
     }
 
+    .textBlock > .paragraph {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 
     .title_tornado_oko {
         display: none;
     }
 
-    .btn {
+
+    .btn, .btns, .title_tornado, .title_tornado_oko {
         display: none;
     }
-
-    .btns {
-        display: none;
-    }
-
-    .title_tornado {
-        display: none;
-    }
-
 
     .title_tornado2 {
         font-family: Montserrat;
@@ -444,72 +424,239 @@ li::marker {
         font-weight: 700;
         letter-spacing: -0.01em;
         padding-top: 30px;
-        margin-bottom: -10px;
     }
 
     .topBlocks {
         display: flex;
         width: 100%;
+        margin: 0 auto;
     }
 
-    .fullWidthBlock {
-        display: flex;
-        height: 200px;
-        width: 100%;
-        margin-top: 15px;
+
+    .first_text h2 {
+        font-size: 20px;
     }
 
     .robot {
-        width: 100%;
-        height: 200px;
+        width: 90%;
+        min-width: 7.0rem;
+        height: auto;
     }
 
-    .oko {
-        margin: 0 auto;
-        width: 100%;
-        height: 200px;
-        padding-left: 20px;
-        margin-left: -15px;
+    .imageBlock .oko {
+        width: 90px;
+        height: auto;
     }
-
 
     .block {
         width: 100%;
-        margin-bottom: 20px;
-        height: 200px;
+        margin-bottom: 30px;
+        height: 180px;
         flex-direction: row-reverse;
+    }
+
+    .para_robot .title_tornado2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 724px) {
+    .paragraph {
+        line-height: 2px;
+        padding: 0 20px 0 2px;
+    }
+
+    .paragraph .title_tornado2 {
+        line-height: 0;
+        margin-top: 10px;
+    }
+
+    .para_robot {
+        width: 100%;
+        line-height: 14px;
+        margin-top: 8px;
+        padding: 0 20px 0 2px;
+    }
+
+    .textBlock {
+        width: 100%;
+        height: auto;
+    }
+
+    .textBlock span {
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.015em;
+        color: #000000CC;
+    }
+
+
+    .para_robot span {
+        line-height: 14px;
+    }
+
+
+    .block_btn {
+        display: flex;
+    }
+
+    .main_title p {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin-left: 10px;
+    }
+
+    .main_title {
+        width: calc(100% - 9px);
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        margin-top: 50px;
+    }
+
+    .main_title h2 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+
+
+    .title_tornado_oko {
+        display: none;
+    }
+
+    .container {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2% 0 2%;
+    }
+
+
+    .topBlocks {
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        margin: 0 auto;
+        margin-bottom: 26px;
+    }
+
+    .robot {
+        display: none;
+    }
+
+    .robot_2 {
+        display: flex;
+    }
+
+    .block {
+        width: 100%;
+        height: 151px;
+        flex-direction: row-reverse;
+        padding: 0;
     }
 
     .textBlock {
         display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding-left: 10px;
-        margin-bottom: 20px;
         margin: 0 auto;
-
+        position: relative;
+        left: 10px;
     }
 
+    .textBlock h2 {
+        font-size: 14px;
+        margin-top: -1px;
+    }
+
+
     .textBlock p {
+        width: 100%;
         font-family: Montserrat;
         font-size: 12px;
         font-weight: 400;
-        text-align: left;
-        letter-spacing: -0.015em;
         line-height: 16px;
+        letter-spacing: -0.015em;
+        color: #000000CC;
+        margin-bottom: 20px;
+        padding: 0 10px;
+        padding-top: 6px;
+    }
+
+
+    .first_text .title_tornado_oko2 {
+        margin-top: -40px;
+        position: absolute;
+        margin-left: 10px;
+    }
+
+    .title_tornado2 {
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+    }
+
+    .imageBlock .robot_2 {
+        width: 128%;
+        height: 100%;
+    }
+
+
+    .fullWidthBlock {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 10px 10px 0 0;
         margin-top: -10px;
+        margin-bottom: 30px;
     }
 
-    .textBlock li {
+
+    .fullWidthBlock .textBlock {
+        height: auto;
+        padding-left: 30px;
+    }
+
+    .text {
+        line-height: 20px;
+        padding: 0;
+    }
+
+    .text p {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .text h3 {
+        font-size: 16px;
+    }
+
+    .text li {
         font-size: 12px;
-        line-height: 18px;
-        margin-top: -5px;
+        line-height: 10px;
     }
 
-    .first_text {
-        width: 60vw;
+    li::marker {
+        content: "";
     }
+
+
 }
+
 
 @media (min-width: 1921px) {
     .button {
@@ -531,32 +678,60 @@ li::marker {
     .block {
         display: flex;
         width: 100%;
-        height: auto;
+        height: 300px;
+
     }
 
     .main_title h2 {
-        font-size: 66px;
+        font-size: 48px;
     }
 
+
     .main_title p {
-        font-size: 36px;
+        font-size: 24px;
         padding-top: 20px;
     }
 
     .fullWidthBlock {
         display: flex;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        gap: 50px;
-        width: 80vw;
         height: auto;
-        padding-right: 50px;
+        padding: 120px 50px 50px 50px;
+        margin-bottom: 30px;
     }
 
+    .fullWidthBlock .textBlock {
+        height: auto;
 
-    .textBlock {
-        padding-top: -50px;
     }
+
+    .text {
+        line-height: 20px;
+        padding: 0;
+    }
+
+    .text p {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        font-size: 24px;
+    }
+
+    .text h3 {
+        font-size: 16px;
+    }
+
+    .text li {
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    li::marker {
+        content: "";
+    }
+
 
     .title_tornado {
         font-size: 46px;
@@ -564,7 +739,7 @@ li::marker {
     }
 
     .robot {
-        width: 100%;
+        width: 300px;
         min-height: 400px;
         margin-right: 80px;
         margin-top: -119px;
@@ -587,66 +762,87 @@ li::marker {
     }
 
     .paragraph {
-        /*width: 500px;*/
         margin-left: 100px;
+        line-height: 22px;
+    }
+
+    .block .title_tornado {
+        font-size: 28px;
+    }
+
+    .block .para_robot span {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .block .paragraph span {
+        font-size: 24px;
+        line-height: 32px;
     }
 
     .paragraph span {
         width: 20vw;
-        font-size: 36px;
-        line-height: 50px;
+        font-size: 24px;
+        line-height: 22px;
     }
 
-    .text {
-        margin-top: 20px;
-    }
 
     .text h3 {
         font-family: Montserrat;
-        font-size: 46px;
+        font-size: 28px;
         font-weight: 600;
         line-height: 20px;
         letter-spacing: -0.015em;
         color: #000000CC;
-        padding-top: 30px;
-        padding-bottom: 40px;
+        /*padding-top: 10px;*/
+        margin-bottom: 30px;
     }
 
 
     .text li {
-        font-size: 30px;
-        line-height: 45px;
+        font-size: 24px;
+        line-height: 26px;
+        margin-bottom: 20px;
     }
 
-    .title_tornado_oko {
-        font-size: 46px;
-        padding-top: 100px;
-        padding-bottom: 30px;
+    .textBlock .title_tornado_oko {
+        font-size: 28px;
+        padding-bottom: 10px;
+        margin-top: -20px;
     }
+
+
+    .fullWidthBlock .imageBlock {
+        width: 400px;
+    }
+
+    .imageBlock .oko {
+        width: 100%;
+        height: 540px;
+
+    }
+
 
     .oko {
-        padding-left: 90px;
-        height: 500px;
-    }
-
-    .imageBlock {
-        margin-top: 200px;
-        margin-right: 50px;
+        width: 100%;
+        height: auto;
     }
 
     .textBlock {
         display: flex;
         margin-left: -40px;
-        margin-top: 20px;
+        /*margin-top: 20px;*/
     }
 
     .first_text {
         width: 60vw;
+        padding-bottom: 20px;
     }
 
     .first_text p {
-        font-size: 40px;
-        line-height: 55px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
     }
 
     .btn {
@@ -660,9 +856,21 @@ li::marker {
         color: #0446F1;
     }
 
-    .btns {
+    .fullWidthBlock .btns {
         width: 250px;
-        height: 62px;
+        height: 42px;
+        border-radius: 6px;
+        background: #FFFFFF;
+        border: 1.5px solid #0446F1;
+        margin-top: 4px;
+        font-size: 30px;
+        color: #0446F1;
+        margin-left: 0;
+    }
+
+    .btns {
+        width: 220px;
+        height: 42px;
         border-radius: 6px;
         background: #FFFFFF;
         border: 1.5px solid #0446F1;
@@ -672,10 +880,13 @@ li::marker {
         margin-left: 100px;
     }
 
-    .text p {
-        font-size: 40px;
-        line-height: 55px;
-        margin-bottom: 10px;
+    .text h3 {
+        margin-top: -10px;
+    }
+
+    .text li {
+        line-height: 20px;
+        margin-top: 4px;
     }
 
 }

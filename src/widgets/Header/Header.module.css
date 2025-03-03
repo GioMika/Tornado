@@ -9,7 +9,8 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: -6px 11px 83px #4374e4;
+    cursor: pointer;
 }
 
 
@@ -231,11 +232,11 @@
     }
 
     .link {
-        font-size: 15px;
+        font-size: 24px;
     }
 
     .address {
-        font-size: 15px;
+        font-size: 24px;
     }
 
     .logo {
@@ -245,8 +246,8 @@
     }
 
     .phoneButton {
-        height: 50px;
-        width: 150px;
+        height: 60px;
+        width: 200px;
     }
 
     .phoneButton span {

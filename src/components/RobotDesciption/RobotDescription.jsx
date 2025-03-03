@@ -79,6 +79,7 @@ export default function RobotDescription() {
     <div className="specs-container">
       <section className="container">
         <div className="specs-display">
+
           <div className={`specs-text ${animation ? 'fade-out' : 'fade-in'}`}>
             <p className="title">{specs.left.title}</p>
             {specs.left.value && <p className="value">{specs.left.value}</p>}
