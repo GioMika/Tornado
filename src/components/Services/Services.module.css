@@ -93,7 +93,7 @@
 .title_updating h2 {
     width: 70%;
     font-family: Nunito, sans-serif;
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: -0.015em;
@@ -140,7 +140,7 @@
 
 .title_leasing h2 {
     font-family: Nunito, sans-serif;
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: -0.015em;
@@ -160,6 +160,7 @@
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
+    gap: 4px;
 }
 
 .block_improvement:hover {
@@ -171,19 +172,15 @@
 .title_improvement h2 {
     width: 70%;
     font-family: Nunito, sans-serif;
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: -0.015em;
     color: #0446F1;
-    margin-left: 2%;
+    margin-left: 10%;
 }
 
 .img_improvement {
-    /*width: auto;*/
-    /*max-width: 150px;*/
-    /*height: auto;*/
-    /*margin-left: 3%;*/
     width: 150px;
     height: 150px;
 }
@@ -219,13 +216,13 @@
 
 .title_rent h2 {
     font-family: Nunito, sans-serif;
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: -0.015em;
     color: #0446F1;
-    /*text-align: center;*/
-    justify-self: center;
+    margin-bottom: 30px;
+
 }
 
 .block_btn {
