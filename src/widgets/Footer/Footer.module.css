@@ -246,7 +246,7 @@
         margin-top: -60px;
         width: 100%;
         justify-items: end;
-        padding:  0 14px 0 0 ;
+        padding:  0 20px 0 0 ;
     }
 
     .span_block {
@@ -261,9 +261,9 @@
         height: 15px;
     }
 
-    .logoMobile {
-        display: flex;
-    }
+    /*.logoMobile {*/
+    /*    display: flex;*/
+    /*}*/
 
     .paragraph_block p {
         line-height: 10px;
@@ -281,7 +281,7 @@
     .logoMobile {
         display: block;
         width: 100%;
-        max-width: 140px;
+        max-width: 100px;
         height: auto;
         margin-bottom: 20px;
     }

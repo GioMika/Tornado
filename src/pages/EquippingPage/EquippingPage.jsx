@@ -14,7 +14,7 @@ const EquippingPage = () => {
 			 </section>
 			 <section className={classes.second_block}>
 				 <div className={classes.content_block}>
-					 <h2>Полный спектр <br/> услуг по <br/> модернизации <br/> и интеграции <br/> оборудования</h2>
+					 <h2>Полный спектр услуг по  модернизации и интеграции  оборудования</h2>
 					 <div className={classes.all_blocks}>
 						 <div className={classes.blocks}>
 							 <div className={classes.block_title_img}>

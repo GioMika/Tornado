@@ -327,8 +327,17 @@
         /*grid-row: 4;*/
     }
 
+    .pults img {
+        width: 180px;
+        align-content: start;
+        top: 0;
+ right: 0;
+
+    }
+
     .pults h2 {
-        padding-top: 20px;
+        /*padding-top: 20px;*/
+        z-index: 111;
     }
 
     .complects {

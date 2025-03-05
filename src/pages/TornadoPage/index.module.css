@@ -389,7 +389,6 @@
         font-size: 14px;
         line-height: 22px;
         padding: 10px 0;
-        /*padding-top: -20px;*/
     }
 
 }
@@ -524,12 +523,10 @@
 @media (max-width: 724px) {
 
     .all_blocks {
-        /*width: 100vw;*/
         grid-template-columns: 1fr;
-        margin-top: -100px;
-        margin-bottom: -111px;
-        /*height: auto;*/
-
+        margin-top: -40px;
+        margin-bottom: -71px;
+        padding-bottom: 70px;
     }
 
     .modifications,
@@ -566,6 +563,7 @@
 
     .sample {
         margin-bottom: 0;
+        margin-right: 20px;
     }
 
 
@@ -602,8 +600,8 @@
 
 
     .peculiarities_block {
-        width:100vw;
-        padding: 50px 10px 0 10px;
+        width: 100vw;
+        padding: 10px 10px 0 10px;
         margin-bottom: -10px;
         padding-bottom: 40px;
     }
@@ -611,10 +609,11 @@
     .tornado_subtitle p {
         font-size: 14px;
         line-height: 22px;
+        margin-top: 20px;
     }
 
     .peculiarities_title {
-        margin-bottom: 100px;
+        margin-bottom: 40px;
         /*padding-left: 6%;*/
     }
 
@@ -633,7 +632,8 @@
     }
 
     .tech_block_title {
-        /*margin-top: 50px;*/
+        margin-top: 60px;
+        height: 0;
     }
 
 
@@ -655,7 +655,7 @@
     }
 
     .modifications .peculiarities_title {
-        height:111px;
+        height: 111px;
         margin-bottom: 10px;
     }
 
