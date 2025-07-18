@@ -1,57 +1,63 @@
 import './App.css';
 import '@fontsource/montserrat';
-// import '@fontsource/nunito';
-import { Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
+import {Suspense, lazy} from 'react';
 
 import Header from '../../widgets/Header/Header';
 import Footer from '../../widgets/Footer/Footer';
-
-
-import Main from '../Main/Main';
-import ProductionPage from '../../pages/ProductionPage/ProductionPage';
-import ServicesPage from '../../pages/ServicesPage/ServicesPage';
-import ServicePage from '../../pages/ServicePage/ServicePage';
-import ContactsPage from '../../pages/ContactsPage/ContactsPage';
-import ManipulatorsPage from '../../pages/Manipulators/ManipulatorsPage';
-import ControlPanelsPage from '../../pages/ControlPanelsPage/ControlPanelsPage';
-import RobotsComplexPage from '../../pages/RobotsComplexPage/RobotsComplexPage';
-import RetrofittingPage from '../../pages/RetrofittingPage/RetrofittingPage';
-import AccessoriesPage from '../../pages/AccessoriesPage/AccessoriesPage';
-import SubscriptionPage from '../../pages/SubscriptionPage/SubscriptionPage';
-import RentPage from '../../pages/RentPage/RentPage';
-import LeasingPage from '../../pages/LeasingPage/LeasingPage';
-import EquippingPage from '../../pages/EquippingPage/EquippingPage';
-import TornadoPage from '../../pages/TornadoPage/TornadoPage';
-import TyphoonPage from '../../pages/TyphoonPage/Typhoon';
-import OkoPage from '../../pages/OkoPage/OkoPage';
 import {ScrollToTop} from "../../helpers/ScrollToTop/ScrollToTop";
+import Loading from "../Loading/Loading";
+import DriveSystemsPage from "../../pages/DriveSystemsPage/DriveSystemsPage";
+import PowerPartsPage from "../../pages/PowerPartsPage/PowerPartsPage";
 
+
+const Main = lazy(() => import('../Main/Main'));
+const ProductionPage = lazy(() => import('../../pages/ProductionPage/ProductionPage'));
+const ServicesPage = lazy(() => import('../../pages/ServicesPage/ServicesPage'));
+const ServicePage = lazy(() => import('../../pages/ServicePage/ServicePage'));
+const ContactsPage = lazy(() => import('../../pages/ContactsPage/ContactsPage'));
+const ManipulatorsPage = lazy(() => import('../../pages/Manipulators/ManipulatorsPage'));
+const ControlPanelsPage = lazy(() => import('../../pages/ControlPanelsPage/ControlPanelsPage'));
+const RobotsComplexPage = lazy(() => import('../../pages/RobotsComplexPage/RobotsComplexPage'));
+const RetrofittingPage = lazy(() => import('../../pages/RetrofittingPage/RetrofittingPage'));
+const AccessoriesPage = lazy(() => import('../../pages/AccessoriesPage/AccessoriesPage'));
+const SubscriptionPage = lazy(() => import('../../pages/SubscriptionPage/SubscriptionPage'));
+const RentPage = lazy(() => import('../../pages/RentPage/RentPage'));
+const LeasingPage = lazy(() => import('../../pages/LeasingPage/LeasingPage'));
+const EquippingPage = lazy(() => import('../../pages/EquippingPage/EquippingPage'));
+const TornadoPage = lazy(() => import('../../pages/TornadoPage/TornadoPage'));
+const TyphoonPage = lazy(() => import('../../pages/TyphoonPage/Typhoon'));
+const OkoPage = lazy(() => import('../../pages/OkoPage/OkoPage'));
 
 const App = () => {
 	return (
 		 <div className="app">
-			 <Header />
+			 <Header/>
 			 <ScrollToTop/>
+			 <Suspense fallback={<Loading/>}>
 			 <Routes>
-				 <Route path="/" element={<Main />} />
-				 <Route path="/production" element={<ProductionPage />} />
-				 <Route path="/services" element={<ServicesPage />} />
-				 <Route path="/service" element={<ServicePage />} />
-				 <Route path="/contacts" element={<ContactsPage />} />
-				 <Route path="/manipulators" element={<ManipulatorsPage />} />
-				 <Route path="/panels" element={<ControlPanelsPage />} />
-				 <Route path="/robots" element={<RobotsComplexPage />} />
-				 <Route path="/retrofitting" element={<RetrofittingPage />} />
-				 <Route path="/accessories" element={<AccessoriesPage />} />
-				 <Route path="/subscription" element={<SubscriptionPage />} />
-				 <Route path="/rent" element={<RentPage />} />
-				 <Route path="/leasing" element={<LeasingPage />} />
-				 <Route path="/equipping" element={<EquippingPage />} />
-				 <Route path="/tornado" element={<TornadoPage />} />
-				 <Route path="/typhoon" element={<TyphoonPage />} />
-				 <Route path="/oko" element={<OkoPage />} />
+				 <Route path="/" element={<Main/>}/>
+				 <Route path="/production" element={<ProductionPage/>}/>
+				 <Route path="/services" element={<ServicesPage/>}/>
+				 <Route path="/service" element={<ServicePage/>}/>
+				 <Route path="/contacts" element={<ContactsPage/>}/>
+				 <Route path="/manipulators" element={<ManipulatorsPage/>}/>
+				 <Route path="/panels" element={<ControlPanelsPage/>}/>
+				 <Route path="/robots" element={<RobotsComplexPage/>}/>
+				 <Route path="/retrofitting" element={<RetrofittingPage/>}/>
+				 <Route path="/accessories" element={<AccessoriesPage/>}/>
+				 <Route path="/subscription" element={<SubscriptionPage/>}/>
+				 <Route path="/drive-systems" element={<DriveSystemsPage/>}/>
+				 <Route path="/spare-parts" element={<PowerPartsPage/>}/>
+				 <Route path="/rent" element={<RentPage/>}/>
+				 <Route path="/leasing" element={<LeasingPage/>}/>
+				 <Route path="/equipping" element={<EquippingPage/>}/>
+				 <Route path="/tornado" element={<TornadoPage/>}/>
+				 <Route path="/typhoon" element={<TyphoonPage/>}/>
+				 <Route path="/oko" element={<OkoPage/>}/>
 			 </Routes>
-			 <Footer />
+			 <Footer/>
+			 </Suspense>
 		 </div>
 	);
 };

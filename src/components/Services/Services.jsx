@@ -4,14 +4,79 @@ import improvement from '../../images/improvement.svg';
 import rent from '../../images/rent.svg';
 import leasing from '../../images/leasing.svg';
 import Partners from "../Partners/Partners";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
+const servicesData = [
+	{
+		id: 1,
+		path: '/subscription',
+		title: "Годовая подписка на программную модернизацию и мелкий ремонт",
+		image: updating,
+		className: 'block_updating',
+		titleClass: 'title_updating',
+		imageClass: 'img_updating'
+	},
+	{
+		id: 2,
+		path: '/leasing',
+		title: "Лизинг",
+		image: leasing,
+		className: 'block_leasing',
+		titleClass: 'title_leasing',
+		imageClass: 'img_leasing'
+	},
+	{
+		id: 3,
+		path: '/equipping',
+		title: "Дооснащение техники оборудованием клиента",
+		image: improvement,
+		className: 'block_improvement',
+		titleClass: 'title_improvement',
+		imageClass: 'img_improvement'
+	},
+	{
+		id: 4,
+		path: '/rent',
+		title: "Аренда техники",
+		image: rent,
+		className: 'block_rent',
+		titleClass: 'title_rent',
+		imageClass: 'img_rent',
+		imageFirst: true
+	}
+];
+
+
+const ServiceBlock = ({ service, onNavigate }) => (
+	 <div
+			onClick={() => onNavigate(service.path)}
+			className={classes[service.className]}
+	 >
+		 {service.imageFirst ? (
+				<>
+					<img className={classes[service.imageClass]} src={service.image} alt={service.title} />
+					<div className={classes[service.titleClass]}>
+						<h2>{service.title}</h2>
+					</div>
+				</>
+		 ) : (
+				<>
+					<div className={classes[service.titleClass]}>
+						<h2>{service.title}</h2>
+					</div>
+					<img className={classes[service.imageClass]} src={service.image} alt={service.title} />
+				</>
+		 )}
+	 </div>
+);
 
 const Services = () => {
 	const navigate = useNavigate();
-	const handelNavigate = (path) => {
-		navigate(path)
-	}
 
+	const handleNavigate = (path) => {
+		navigate(path);
+	};
 
 	return (
 		 <>
@@ -21,39 +86,16 @@ const Services = () => {
 					 <p>Воспользуйтесь уникальными предложениями</p>
 				 </div>
 				 <div className={classes.blocks}>
-
-					 <div onClick={() => handelNavigate('/subscription')}  className={classes.block_updating}>
-						 <div className={classes.title_updating}>
-							 <h2>Годовая подписка на программную модернизацию и мелкий ремонт</h2>
-						 </div>
-						 <img className={classes.img_updating} src={updating} alt=""/>
-					 </div>
-
-					 <div onClick={() => handelNavigate('/leasing')} className={classes.block_leasing}>
-						 <div className={classes.title_leasing}>
-							 <h2>Лизинг</h2>
-						 </div>
-						 <img className={classes.img_leasing} src={leasing} alt=""/>
-					 </div>
-
-
-					 <div onClick={() => handelNavigate('/equipping')} className={classes.block_improvement}>
-						 <div className={classes.title_improvement}>
-							 <h2>Дооснащение техники оборудованием клиента</h2>
-						 </div>
-						 <img className={classes.img_improvement} src={improvement} alt=""/>
-					 </div>
-
-
-					 <div onClick={() => handelNavigate('/rent')} className={classes.block_rent}>
-						 <img className={classes.img_rent} src={rent} alt=""/>
-						 <div className={classes.title_rent}>
-							 <h2>Аренда техники</h2>
-						 </div>
-					 </div>
+					 {servicesData.map(service => (
+							<ServiceBlock
+								 key={service.id}
+								 service={service}
+								 onNavigate={handleNavigate}
+							/>
+					 ))}
 				 </div>
 			 </section>
-			 <Partners/>
+			 <Partners />
 		 </>
 	);
 };

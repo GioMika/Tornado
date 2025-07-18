@@ -1,143 +1,176 @@
 .main {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 0 4% 0 8%;
     background-image: url("../../images/service.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 133px) top;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    padding-top: 0;
 }
 
 .main_blocks {
-    display: flex;
-    flex-direction: column;
-    margin: 20vh 0 0 14vw;
+    margin-bottom: 120px;
+    width: 100%;
 }
 
 .main_blocks h2 {
-    font-family: Montserrat;
-    font-size: 48px;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
     font-weight: 400;
-    line-height: 72px;
+    line-height: 1.5;
     letter-spacing: -0.015em;
     color: #0446F1;
-    margin-bottom: 74px;
+    text-align: start;
+    padding-right: 100px;
+    padding-top: 120px;
 }
 
-.blocks {
+.blocksGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    gap: 20px;
+    margin-top: 5%;
+    justify-content: flex-start;
 }
 
-
-.first_blocks, .second_blocks {
-    width: 100%;
-    max-width: 325px;
-    height: 375px;
-    background: #FAFAFA;
-    box-shadow: 20px 20px 50px 10px #0446F11A;
-    border-radius: 30px;
+.first_blocks {
+    position: relative;
+    border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 .first_blocks:hover {
-    transform: translateZ(10px);
+    transform: translateY(-5px);
     box-shadow: 0 4px 8px #6f95f2;
+    cursor: pointer;
 }
 
-
-.second_blocks:hover {
-    transform: translateZ(10px);
-    box-shadow: 0 4px 8px #6f95f2;
-}
-
-
-.first_blocks p, .second_blocks p {
+.first_blocks p {
+    position: absolute;
+    left: 20px;
+    top: 20px;
     font-family: Montserrat;
-    font-size: 20px;
     font-weight: 700;
-    line-height: 36px;
-    letter-spacing: -0.015em;
+    font-size: 20px;
+    line-height: 24px;
     color: #0446F1;
-    padding-left: 30px;
-    margin-top: 30px;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
 }
 
-@media (max-width: 880px) {
-    .blocks {
-        display: block;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .first_blocks, .second_blocks {
-        width: 100%;
-        max-width: 100%;
-        height: 200px;
-    }
-
-    .first_blocks p, .second_blocks p {
-        padding: 10px 0 0 30px;
-    }
-
-    .main_blocks {
-        margin: 20px;
-    }
-
-    .main_blocks h2 {
-        font-family: Montserrat;
-        font-size: 38px;
-        margin-bottom: 74px;
-    }
-
-
-    .main {
-        background-size: 100% 100%;
-    }
-
+.img {
+    width: 370px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 93, 94, 0.29);
+    color: #fdfe95;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+    text-align: center;
+    padding: 0 20px;
+}
 
+.first_blocks:hover .overlay {
+    opacity: 1;
+}
+
+/* ---------------------- */
+/* ✅ Адаптив: 1920px и выше */
 @media (min-width: 1920px) {
-    .main_blocks h2 {
-        font-family: Montserrat;
-        font-size: 68px;
-        margin-bottom: 74px;
+    .img {
+        width: 420px;
     }
 
-    .main {
-        width: 100%;
-        height: 100vh;
-        background-image: url("../../images/service.svg");
-        background-repeat: no-repeat;
-        /*background-position: calc(100% - 33px) top;*/
-        background-attachment: fixed;
-        display: flex;
-        flex-direction: column;
-        padding-top: 0;
-        background-size: 60% 60%;
-    }
-
-    .first_blocks, .second_blocks {
-        width: 100%;
-        max-width: 700px;
-        height: 600px;
-    }
-
-    .first_blocks p, .second_blocks p {
-        font-size: 30px;
-        padding: 30px 0 0 30px;
-    }
-
-    .main_blocks {
-        margin-left: 14%;
+    .first_blocks p {
+        font-size: 22px;
     }
 }
 
+/* ✅ Адаптив: до 1024px */
+@media (max-width: 1024px) {
+    .main {
+        padding: 0 4%;
+    }
 
+    .main_blocks h2 {
+        padding-top: 80px;
+        padding-right: 40px;
+        font-size: 38px;
+    }
 
+    .blocksGrid {
+        justify-content: space-between;
+    }
+
+    .img {
+        width: 300px;
+    }
+
+    .first_blocks p {
+        font-size: 18px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .overlay {
+        font-size: 20px;
+    }
+}
+
+/* ✅ Адаптив: до 724px */
+@media (max-width: 724px) {
+    .main {
+        padding: 0 3%;
+    }
+
+    .main_blocks h2 {
+        font-size: 32px;
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    .blocksGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .first_blocks p {
+        font-size: 16px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .overlay {
+        font-size: 18px;
+    }
+}
