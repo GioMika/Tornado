@@ -442,7 +442,7 @@ body {
     }
 
     .fullWidthBlock {
-        height: auto;
+        height: 300px;
         padding: 20px;
     }
 
@@ -453,17 +453,17 @@ body {
 
     .text h3 {
         font-size: 20px;
-        line-height: 26px;
+        line-height: 22px;
     }
 
     .text p {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 12px;
     }
 
     .text li {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 16px;
     }
 
     .btn {
