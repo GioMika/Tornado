@@ -536,3 +536,32 @@
         right: -30%;
     }
 }
+
+
+
+
+.background2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.background2Img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scopeOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
