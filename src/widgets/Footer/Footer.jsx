@@ -1,7 +1,9 @@
 import classes from './Footer.module.css'
 import logo from '../../images/logo.svg'
-import logoMobile from '../../images/logoMobile.svg'
 import {Link} from "react-router-dom";
+import tel from './icons/telegram 1.svg'
+import What from './icons/What.svg'
+import inst from './icons/Insta.svg'
 
 const Footer = () => {
 	return (
@@ -9,15 +11,17 @@ const Footer = () => {
 			 <div className={classes.main}>
 				 <div className={classes.contacts}>
 					 <img className={classes.logo} src={logo} alt=""/>
-					 <img className={classes.logoMobile} src={logoMobile} alt=""/>
+					 <img className={classes.logoMobile} src={logo} alt=""/>
 					 <div className={classes.paragraph_block}>
 						 <h5>Адрес: ул. рроаып</h5>
-						 <h5> Телефон</h5>
-						 <h5>Почта</h5>
+						 <h5>Телефон : + 7 (499) 367 01 18</h5>
+						 <h5>Почта : info@rcrobotics.ru</h5>
 						 <div className={classes.span_block}>
-							 <span className={classes.span}></span>
-							 <span className={classes.span}></span>
-							 <span className={classes.span}></span>
+							 <span className={classes.span}>
+								 <img src={tel} alt=""/>
+							 </span>
+							 <span className={classes.span}> <img src={What} alt=""/></span>
+							 <span className={classes.span}> <img src={inst} alt=""/></span>
 						 </div>
 					 </div>
 				 </div>
@@ -48,7 +52,7 @@ const Footer = () => {
 					 <h2>Услуги</h2>
 					 <Link className={classes.link} to="/subscription">
 						 <p className={classes.subtitle}>Годовая подписка на
-							 <br/> программную модернизацию<br/>
+							 программную  <br/> модернизацию
 							 и мелкий ремонт</p>
 					 </Link>
 					 <div className={classes.products_block}>
@@ -64,38 +68,6 @@ const Footer = () => {
 					 </div>
 				 </div>
 
-				 <div className={classes.footer_mobile}>
-					 <div className={classes.products_mobile}>
-						 <h2>Продукция</h2>
-						 <Link to="/robots">
-							 <p>Модель 1</p>
-						 </Link>
-						 <Link to="/manipulators">
-							 <p>Модель 2</p>
-						 </Link>
-						 <p>Модель 3</p>
-						 <Link to="/panels">
-							 <p>Модель 4</p>
-						 </Link>
-
-
-						 <h2 className={classes.company_title}>Компания</h2>
-						 <p>О нас</p>
-						 <p>Контакты</p>
-						 <p>Политика  конфиденциальности</p>
-						 <p>FAQ</p>
-
-
-						 <h2 className={classes.company_title}>Услуги</h2>
-						 <p>Сервис</p>
-					 </div>
-					 <div className={classes.products_mobile}>
-						 {/*<h2>Услуги</h2>*/}
-						 {/*<p>Сервис</p>*/}
-					 </div>
-				 </div>
-
-
 				 <div className={classes.products}>
 					 <h2>Сервис</h2>
 					 <div className={classes.products_block}>
@@ -106,7 +78,7 @@ const Footer = () => {
 			 </div>
 			 <div className={classes.line}></div>
 			 <div className={classes.footer_block}>
-				 <p>ООО “RCRobotics”</p>
+				 <p>ООО "RCRobotics"</p>
 				 <p>С 2024 Все права защищены</p>
 			 </div>
 		 </footer>
