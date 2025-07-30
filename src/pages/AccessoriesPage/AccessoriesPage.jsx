@@ -1,7 +1,7 @@
-import classes from './index.module.css'
-import img1 from './imgs/Sub-1.png'
-import img2 from './imgs/Sub-2.png'
-import img3 from './imgs/Sub-3.png'
+import classes from './index.module.css';
+import img1 from './imgs/Sub-1.png';
+import img2 from './imgs/Sub-2.png';
+import img3 from './imgs/Sub-3.png';
 
 const accessoriesItems = [
 	{ id: 1, title: "Силовые установки", image: img1 },

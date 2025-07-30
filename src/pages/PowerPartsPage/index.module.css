@@ -8,7 +8,6 @@
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-
 }
 
 .main_blocks {
@@ -44,9 +43,12 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    /*height: 360px;*/
+    height: 360px;
 }
 
+.blocksGrid .first_blocks:first-of-type p {
+    width: 60%;
+}
 
 .first_blocks:hover {
     transform: translateY(-5px);

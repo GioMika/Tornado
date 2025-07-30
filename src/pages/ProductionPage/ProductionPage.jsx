@@ -1,11 +1,11 @@
 import classes from './index.module.css';
 import { useNavigate } from "react-router-dom";
 
-import robotsImg from './prodImg/SubtractProd.png';
-import retrofittingImg from './prodImg/SubtractProd1.png';
-import manipulatorsImg from './prodImg/SubtractProd2.png';
-import panelsImg from './prodImg/SubtractProd3.png';
-import accessoriesImg from './prodImg/SubtractPro4.png';
+import robotsImg from './prodImg/Sub-1.png';
+import retrofittingImg from './prodImg/Sub-2.png';
+import manipulatorsImg from './prodImg/Sub-3.png';
+import panelsImg from './prodImg/Sub-4.png';
+import accessoriesImg from './prodImg/Sub-5.png';
 
 const productionData = [
 	{ id: 1, path: '/robots', title: 'Роботы', image: robotsImg, className: 'robotsCard', gridArea: 'robots' },
@@ -19,23 +19,20 @@ const ProductCard = ({ product, onNavigate }) => {
 	const handleClick = () => onNavigate(product.path);
 
 	return (
-		 <div
-				className={`${classes.first_blocks} ${classes[product.className]}`}
-				onClick={handleClick}
-				style={{ gridArea: product.gridArea }}
-		 >
-			 <p dangerouslySetInnerHTML={{ __html: product.title }} />
+		 <div className={`${classes.imageContainer} ${classes[product.className]}`}
+					onClick={handleClick}
+					style={{ gridArea: product.gridArea }}>
+			 <p className={classes.title} dangerouslySetInnerHTML={{ __html: product.title }} />
 			 <img src={product.image} alt={product.title} className={classes.img} />
-			 <div className={classes.overlay}>
-				 <span>Товар не доступен</span>
-			 </div>
 		 </div>
 	);
 };
 
 const ProductionPage = () => {
+	const navigate = useNavigate();
+
 	const handleNavigate = (path) => {
-		console.log(`Navigate to: ${path}`);
+		navigate(path);
 	};
 
 	return (
